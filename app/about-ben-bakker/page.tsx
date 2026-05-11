@@ -29,11 +29,34 @@ export default function AboutBenBakkerPage() {
               existing building passive fire systems.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
-                <p className="text-sm text-gray-400">Managing Director</p>
-                <p className="font-semibold mt-1">BAKKER PFI LTD</p>
-              </div>
+<div className="mt-10">
+  <div className="flex flex-wrap gap-4">
+    <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
+      <p className="text-sm text-gray-400">Managing Director</p>
+      <p className="font-semibold mt-1">BAKKER PFI LTD</p>
+    </div>
+
+    <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
+      <p className="text-sm text-gray-400">Industry Focus</p>
+      <p className="font-semibold mt-1">Existing Buildings</p>
+    </div>
+
+    <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
+      <p className="text-sm text-gray-400">Specialisation</p>
+      <p className="font-semibold mt-1">Compliance Reporting</p>
+    </div>
+  </div>
+
+  <div className="mt-6">
+<a
+  href="https://www.linkedin.com/in/benjamin1975/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center bg-[#ff6e00] hover:bg-[#e66300] transition-colors text-white rounded-2xl px-6 py-4 font-semibold"
+>
+  View Ben Bakker on LinkedIn →
+</a>
+  </div>
 
               <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
                 <p className="text-sm text-gray-400">Industry Focus</p>
