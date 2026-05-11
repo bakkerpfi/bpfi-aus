@@ -19,6 +19,40 @@ export default function ContactPage() {
       </section>
 
       <section className="max-w-3xl mx-auto px-6 py-24">
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+  <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+    <p className="text-sm text-gray-400 mb-2">Office</p>
+
+    <a
+      href="tel:+61290679765"
+      className="text-xl font-bold hover:text-[#ff6e00] transition-colors"
+    >
+      +61 2 9067 9765
+    </a>
+  </div>
+
+  <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+    <p className="text-sm text-gray-400 mb-2">Mobile</p>
+
+    <a
+      href="tel:+61415568983"
+      className="text-xl font-bold hover:text-[#ff6e00] transition-colors"
+    >
+      +61 415 568 983
+    </a>
+  </div>
+
+  <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+    <p className="text-sm text-gray-400 mb-2">Email</p>
+
+    <a
+      href="mailto:ben@bakkerpfi.com"
+      className="text-xl font-bold hover:text-[#ff6e00] transition-colors break-all"
+    >
+      ben@bakkerpfi.com
+    </a>
+  </div>
+</div>
         <form className="bg-white rounded-3xl p-10 shadow-sm border border-gray-100 space-y-6">
           <div>
             <label className="block mb-2 font-semibold">
