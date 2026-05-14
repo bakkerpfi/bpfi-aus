@@ -1,41 +1,44 @@
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-10 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-10 items-start">
-          <div>
-            <p className="font-bold text-lg">BAKKER PFI LTD</p>
+    <footer className="border-t border-white/10 bg-black py-10 text-white">
 
-            <p className="text-gray-400 mt-2">
-              Bakker Passive Fire Inspections
+      <div className="mx-auto max-w-7xl px-6">
+
+        <div className="grid items-start gap-10 md:grid-cols-3">
+
+          {/* LEFT */}
+          <div>
+
+            <p className="text-lg font-bold">
+              BAKKER PFI LTD
             </p>
 
-            <p className="text-gray-500 mt-4 text-sm">
+            <p className="mt-2 text-gray-400">
+              Passive Fire Inspection & Compliance Specialists
+            </p>
+
+            <p className="mt-4 text-sm text-gray-500">
               Powered by Codexus Compliance Systems
             </p>
+
           </div>
 
+          {/* CONTACT */}
           <div>
-            <p className="font-semibold mb-4">Contact</p>
 
-            <div className="space-y-3 text-gray-400 text-sm">
-              <p>
-                Office:{" "}
-                <a
-                  href="tel:+61290679765"
-                  className="hover:text-white transition-colors"
-                >
-                  +61 2 9067 9765
-                </a>
-              </p>
+            <p className="mb-4 font-semibold">
+              Contact
+            </p>
+
+            <div className="space-y-3 text-sm text-gray-400">
 
               <p>
                 Mobile:{" "}
                 <a
-                  href="tel:+61415568983"
-                  className="hover:text-white transition-colors"
+                  href="tel:+64226795244"
+                  className="transition-colors hover:text-white"
                 >
-                  +61 415 568 983
+                  +64 22 679 5244
                 </a>
               </p>
 
@@ -43,25 +46,66 @@ export default function Footer() {
                 Email:{" "}
                 <a
                   href="mailto:ben@bakkerpfi.com"
-                  className="hover:text-white transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   ben@bakkerpfi.com
                 </a>
               </p>
+
+              <p>
+                LinkedIn:{" "}
+                <a
+                  href="https://www.linkedin.com/in/benjamin1975/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  Benjamin Bakker
+                </a>
+              </p>
+
             </div>
+
           </div>
 
+          {/* SERVICE AREA */}
           <div>
-            <p className="font-semibold mb-4">Focused Service Area</p>
 
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Passive fire inspection and compliance reporting services focused
-              on existing commercial buildings throughout Sydney CBD and
-              surrounding commercial precincts.
+            <p className="mb-4 font-semibold">
+              Christchurch & Canterbury
             </p>
+
+            <p className="text-sm leading-relaxed text-gray-400">
+              Passive fire inspections,
+              compartmentation surveys,
+              fire door inspections,
+              penetration reviews,
+              compliance reporting and BWOF remedial support throughout Christchurch and Canterbury.
+            </p>
+
           </div>
+
         </div>
+
+        {/* BOTTOM */}
+        <div className="mt-10 border-t border-white/10 pt-6 text-sm text-gray-500">
+
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+
+            <p>
+              © 2026 BAKKER PFI LTD. All rights reserved.
+            </p>
+
+            <p>
+              Christchurch Passive Fire Compliance Specialists
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
+
     </footer>
   );
 }

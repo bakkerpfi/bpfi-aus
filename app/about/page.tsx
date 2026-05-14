@@ -6,7 +6,21 @@ const team = [
     role: "Technical Director & Passive Fire Compliance Specialist",
     image: "/ben-bakker.png",
     description:
-      "Benjamin Bakker has over 20 years experience in passive fire protection specialising in inspections, compliance reporting, compartmentation surveys, installation systems and digital compliance workflows across New Zealand and Australia.",
+      "Benjamin Bakker has over 10 years experience in passive fire protection specialising in inspections, compliance reporting, compartmentation surveys, installation systems and digital compliance workflows across New Zealand and Australia.",
+  },
+  {
+    name: "Nicole Del Rosario",
+    role: "Project Manager",
+    image: "/nicole-del-rosario.png",
+    description:
+      "Nicole Del Rosario supports project coordination, passive fire compliance workflows, reporting systems and operational management across BAKKER PFI LTD projects.",
+  },
+  {
+    name: "Raul Cabanero",
+    role: "Passive Fire Installer",
+    image: "/raul.png",
+    description:
+      "Raul Cabanero supports passive fire installation and remediation works, providing practical tested system installation experience and real-world site knowledge.",
   },
 ];
 
@@ -21,7 +35,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            About BAKKER PFI Australia
+            About BAKKER PFI LTD
           </p>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
@@ -29,10 +43,10 @@ export default function AboutPage() {
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
-            BAKKER PFI Australia provides passive fire inspections,
+            BAKKER PFI LTD provides passive fire inspections,
             fire compartmentation surveys,
-            compliance reporting and rectification workflow support
-            throughout Sydney and NSW.
+            compliance reporting and BWOF remedial support
+            throughout Christchurch and Canterbury.
           </p>
 
         </div>
@@ -45,21 +59,21 @@ export default function AboutPage() {
           <div className="max-w-5xl">
 
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Technical Leadership
+              Inspection & Compliance Support
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Inspection & Compliance Support
+              Real Industry Experience Supporting Compliance
             </h2>
 
             <div className="mt-10 space-y-8 text-lg leading-8 text-zinc-400">
 
               <p>
-                BAKKER PFI Australia supports building owners,
-                strata managers,
+                BAKKER PFI LTD supports building owners,
+                IQPs,
                 facility managers,
                 consultants and contractors with passive fire inspections,
-                compliance reporting and compartmentation surveys across Sydney.
+                compliance reporting and compartmentation surveys throughout Christchurch and Canterbury.
               </p>
 
               <p>
@@ -78,9 +92,10 @@ export default function AboutPage() {
               </p>
 
               <p>
-                Our inspection workflows are designed to support documentation requirements associated with NCC compliance,
-                Essential Fire Safety Measures (EFSM)
-                and Annual Fire Safety Statement (AFSS) processes.
+                Our inspection workflows are designed to support documentation requirements associated with BWOF compliance,
+                IQP reviews,
+                fire separations,
+                passive fire penetrations and ongoing building compliance management.
               </p>
 
             </div>
@@ -94,7 +109,19 @@ export default function AboutPage() {
       <section className="border-b border-zinc-900 py-24">
         <div className="mx-auto max-w-7xl px-6">
 
-          <div className="grid gap-10 lg:grid-cols-1 max-w-2xl">
+          <div className="mb-16">
+
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Auckland Operations Team
+            </p>
+
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Technical & Operational Support
+            </h2>
+
+          </div>
+
+          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
 
             {team.map((member) => (
               <div
@@ -104,11 +131,13 @@ export default function AboutPage() {
 
                 {/* IMAGE */}
                 <div className="aspect-[4/5] overflow-hidden bg-zinc-900">
+
                   <img
                     src={member.image}
                     alt={member.name}
                     className="h-full w-full object-cover"
                   />
+
                 </div>
 
                 {/* CONTENT */}
@@ -150,7 +179,7 @@ export default function AboutPage() {
               </p>
 
               <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-                Australia & New Zealand Operations
+                New Zealand, Australia & Singapore Operations
               </h2>
 
             </div>
@@ -175,8 +204,8 @@ export default function AboutPage() {
 
               <p>
                 This operational knowledge supports inspection and compliance workflows
-                throughout Sydney,
-                Christchurch and Singapore,
+                throughout Christchurch,
+                Sydney and Singapore,
                 helping bridge the gap between installation,
                 inspection and compliance reporting.
               </p>
@@ -197,6 +226,84 @@ export default function AboutPage() {
           </div>
 
         </div>
+      </section>
+
+      {/* CODEXUS */}
+      <section className="border-b border-zinc-900 bg-zinc-950 py-28">
+
+        <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:grid-cols-2">
+
+          <div>
+
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Codexus Compliance Systems
+            </p>
+
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Powered By Real Installation Knowledge
+            </h2>
+
+          </div>
+
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+
+            <p>
+              Codexus is a digital passive fire compliance platform designed to organise inspections,
+              defect registers,
+              penetration records,
+              compliance workflows and building documentation.
+            </p>
+
+            <p>
+              Unlike many purely theoretical systems,
+              Codexus is powered by real-world passive fire installation,
+              remediation and inspection experience provided by BAKKER PFI LTD.
+            </p>
+
+            <p>
+              This practical field knowledge helps support more accurate reporting,
+              improved defect identification
+              and structured pathways toward building compliance.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CTA */}
+      <section className="py-32">
+
+        <div className="mx-auto max-w-5xl px-6 text-center">
+
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
+            Christchurch & Canterbury
+          </p>
+
+          <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+            Passive Fire Inspection & Compliance Support
+          </h2>
+
+          <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
+            Contact Benjamin Bakker to discuss passive fire inspections,
+            compartmentation surveys,
+            BWOF remedial support and digital compliance workflows.
+          </p>
+
+          <div className="mt-14">
+
+            <a
+              href="/contact"
+              className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
+            >
+              Contact BAKKER PFI LTD
+            </a>
+
+          </div>
+
+        </div>
+
       </section>
 
     </main>

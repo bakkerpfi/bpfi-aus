@@ -2,8 +2,6 @@
 
 import { Suspense, useRef } from "react";
 import { useSearchParams } from "next/navigation";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
 import Navbar from "@/components/Navbar";
 
 function CertificateContent() {
@@ -17,123 +15,96 @@ function CertificateContent() {
   const name =
     searchParams.get("name") || "Participant";
 
-  const downloadCertificate = async () => {
-
-    if (!certificateRef.current) return;
-
-    const canvas = await html2canvas(
-      certificateRef.current,
-      {
-        scale: 2,
-      }
-    );
-
-    const imgData =
-      canvas.toDataURL("image/png");
-
-    const pdf = new jsPDF({
-      orientation: "landscape",
-      unit: "px",
-      format: [
-        canvas.width,
-        canvas.height,
-      ],
-    });
-
-    pdf.addImage(
-      imgData,
-      "PNG",
-      0,
-      0,
-      canvas.width,
-      canvas.height
-    );
-
-    pdf.save(
-      "Bakker-PFI-Certificate.pdf"
-    );
-  };
-
   return (
-    <section className="flex flex-col items-center justify-center px-4 py-10">
+    <section className="flex flex-col items-center justify-center bg-black px-4 py-10 print:p-0">
 
+      {/* CERTIFICATE */}
       <div
         ref={certificateRef}
         id="certificate"
-        className="mx-auto flex h-[1080px] w-[760px] flex-col justify-between overflow-hidden rounded-[20px] border border-orange-500 bg-zinc-950 p-10 shadow-2xl"
+        className="relative mx-auto flex h-[1122px] w-[794px] flex-col justify-between overflow-hidden border border-orange-500 bg-zinc-950 p-14 shadow-2xl print:h-[1122px] print:w-[794px] print:rounded-none print:border-none print:shadow-none"
       >
 
+        {/* BACKGROUND GLOW */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(249,115,22,0.12),transparent_40%)]" />
+
         {/* HEADER */}
-        <div className="text-center">
+        <div className="relative z-10 text-center">
 
           <img
             src="/logo.png"
-            alt="BAKKER PFI"
+            alt="BAKKER PFI LTD"
             className="mx-auto mb-10 h-24 w-auto"
           />
 
-          <p className="mb-4 text-sm uppercase tracking-[0.4em] text-orange-500">
+          <p className="mb-4 text-sm uppercase tracking-[0.45em] text-orange-500">
             Certificate of Completion
           </p>
 
-          <h1 className="text-5xl font-bold leading-tight md:text-7xl">
-            Passive Fire Basic Understanding
+          <h1 className="text-6xl font-bold leading-tight">
+            Passive Fire
+            <br />
+            Basic Understanding
           </h1>
 
         </div>
 
         {/* BODY */}
-        <div className="mt-20 text-center">
+        <div className="relative z-10 text-center">
 
-          <p className="text-lg uppercase tracking-[0.3em] text-zinc-500">
+          <p className="text-lg uppercase tracking-[0.35em] text-zinc-500">
             Awarded To
           </p>
 
-          <h2 className="mt-6 text-5xl font-bold text-orange-500 md:text-6xl">
+          <h2 className="mt-8 text-6xl font-bold text-orange-500">
             {name}
           </h2>
 
-          <p className="mx-auto mt-12 max-w-3xl text-xl leading-10 text-zinc-400">
+          <p className="mx-auto mt-14 max-w-3xl text-2xl leading-[2.2rem] text-zinc-300">
             For successfully completing the
-            BAKKER PFI Ltd Passive Fire Learning Quiz
-            and demonstrating a basic understanding of passive fire protection systems,
-            fire compartmentation and compliance principles.
+            BAKKER PFI LTD Christchurch Passive Fire Awareness Quiz
+            and demonstrating a foundational understanding of passive fire protection,
+            fire compartmentation,
+            service penetrations,
+            fire doors and passive fire compliance workflows.
           </p>
 
         </div>
 
         {/* FOOTER */}
-        <div className="mt-24 grid gap-10 border-t border-zinc-800 pt-10 md:grid-cols-2">
+        <div className="relative z-10 grid gap-10 border-t border-zinc-800 pt-10 md:grid-cols-2">
 
+          {/* LEFT */}
           <div>
 
             <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
               Issued By
             </p>
 
-            <p className="mt-4 text-2xl font-bold">
-              BAKKER PFI Ltd
+            <p className="mt-4 text-3xl font-bold">
+              BAKKER PFI LTD
             </p>
 
-            <p className="mt-2 text-zinc-500">
+            <p className="mt-3 text-lg text-zinc-400">
               Passive Fire Inspection & Compliance Reporting
             </p>
 
           </div>
 
+          {/* RIGHT */}
           <div className="md:text-right">
 
             <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
               Learning Centre
             </p>
 
-<p className="mt-4 text-2xl font-bold">
-  Sydney, Australia
-</p>
+            <p className="mt-4 text-3xl font-bold">
+              Christchurch, New Zealand
+            </p>
 
-<p className="mt-2 text-zinc-500">
-  www.bakkerpfi.com
-</p>
+            <p className="mt-3 text-lg text-zinc-400">
+              www.bakkerpfi.co.nz
+            </p>
 
           </div>
 
@@ -141,17 +112,46 @@ function CertificateContent() {
 
       </div>
 
-      {/* DOWNLOAD BUTTON */}
-      <div className="mt-10">
+      {/* BUTTON */}
+      <div className="mt-10 print:hidden">
 
         <button
-           onClick={() => window.print()}
-          className="print:hidden rounded-2xl bg-orange-500 px-10 py-5 text-lg font-semibold text-white transition hover:bg-orange-600"
+          onClick={() => window.print()}
+          className="rounded-2xl bg-orange-500 px-10 py-5 text-lg font-semibold text-white transition hover:bg-orange-600"
         >
           Download Certificate
         </button>
 
       </div>
+
+      {/* PRINT FIX */}
+      <style jsx global>{`
+        @media print {
+
+          @page {
+            size: A4 portrait;
+            margin: 0;
+          }
+
+          html,
+          body {
+            width: 794px;
+            height: 1122px;
+            background: black;
+            overflow: hidden;
+          }
+
+          nav {
+            display: none !important;
+          }
+
+          #certificate {
+            page-break-after: avoid;
+            break-after: avoid;
+          }
+
+        }
+      `}</style>
 
     </section>
   );

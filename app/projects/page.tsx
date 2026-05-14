@@ -2,45 +2,68 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Passive Fire Services Christchurch | BAKKER PFI LTD",
+  title: "Passive Fire Projects Christchurch | BAKKER PFI LTD",
   description:
-    "Passive fire inspections, compartmentation surveys, BWOF remedial support and compliance reporting throughout Christchurch and Canterbury.",
+    "Examples of passive fire inspections, compartmentation surveys and compliance workflows supported by BAKKER PFI LTD throughout Christchurch and Canterbury.",
 };
 
-const services = [
+const projectTypes = [
   {
-    title: "Passive Fire Inspections",
+    title: "Apartment Buildings",
     description:
-      "Inspection workflows supporting identification of passive fire defects throughout existing buildings.",
+      "Passive fire inspections, fire door reviews and compartmentation surveys within multi-level residential buildings.",
   },
   {
-    title: "Compartmentation Surveys",
+    title: "Commercial Offices",
     description:
-      "Review of fire-rated separations, penetrations, risers, ceiling spaces and fire barriers.",
+      "Inspection workflows supporting fire separation reviews, service penetrations and compliance visibility.",
   },
   {
-    title: "Fire Door Inspections",
+    title: "Hotels & Accommodation",
     description:
-      "Inspection of fire doors, smoke seals, door gaps, hardware and compartmentation performance.",
+      "Existing building inspections supporting passive fire compliance and remediation planning.",
   },
   {
-    title: "Penetration Surveys",
+    title: "Healthcare Facilities",
     description:
-      "Identification and documentation of passive fire penetration defects and fire stopping systems.",
+      "Review of fire compartmentation systems, risers, penetrations and passive fire barriers.",
   },
   {
-    title: "BWOF Remedial Support",
+    title: "Retail & Mixed Use Buildings",
     description:
-      "Supporting compliance workflows associated with BWOF inspections and ongoing building maintenance.",
+      "Inspection and reporting workflows associated with tenancy fitouts and service upgrades.",
   },
   {
-    title: "Compliance Reporting",
+    title: "Existing Building Remediation",
     description:
-      "Structured reporting workflows including photographs, defect registers and passive fire observations.",
+      "Identification and documentation of passive fire defects requiring remedial review.",
   },
 ];
 
-export default function ServicesPage() {
+const workflowSteps = [
+  {
+    title: "Inspection",
+    description:
+      "Review of passive fire systems throughout buildings including penetrations, fire doors and fire separations.",
+  },
+  {
+    title: "Defect Identification",
+    description:
+      "Identification of passive fire defects, damaged barriers and compartmentation issues.",
+  },
+  {
+    title: "Reporting",
+    description:
+      "Structured reporting workflows using photographs, defect registers and inspection records.",
+  },
+  {
+    title: "Compliance Visibility",
+    description:
+      "Improving visibility of passive fire systems and supporting compliance management workflows.",
+  },
+];
+
+export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-black text-white">
 
@@ -54,11 +77,11 @@ export default function ServicesPage() {
 
           <img
             src="/christchurch.png"
-            alt="Christchurch Passive Fire Services"
+            alt="Passive Fire Projects Christchurch"
             className="h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-black/60" />
 
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
@@ -68,22 +91,19 @@ export default function ServicesPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Christchurch Passive Fire Compliance Specialists
+            Christchurch Passive Fire Projects
           </p>
 
           <h1 className="max-w-6xl text-5xl font-bold leading-tight md:text-7xl">
-            Passive Fire Inspection
+            Inspection
             <br />
-            & Compliance Services
+            & Compliance Workflows
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            Supporting building owners,
-            IQPs,
-            facility managers and contractors
-            throughout Christchurch and Canterbury with passive fire inspections,
-            fire compartmentation surveys,
-            compliance reporting and BWOF remedial support.
+            Examples of passive fire inspections,
+            fire compartmentation reviews,
+            penetration surveys and compliance workflows supported by BAKKER PFI LTD throughout Christchurch and Canterbury.
           </p>
 
         </div>
@@ -98,11 +118,11 @@ export default function ServicesPage() {
           <div>
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Inspection & Compliance Services
+              Existing Building Focus
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Supporting Existing Building Compliance
+              Supporting Passive Fire Visibility
             </h2>
 
           </div>
@@ -114,12 +134,12 @@ export default function ServicesPage() {
             </p>
 
             <p>
-              Our focus is improving visibility of passive fire systems,
-              identifying compartmentation defects and supporting structured compliance reporting workflows.
+              Our work focuses on improving visibility of passive fire systems,
+              identifying compartmentation defects and supporting structured reporting workflows.
             </p>
 
             <p>
-              We combine real-world installation knowledge with inspection systems and digital compliance workflows to support practical passive fire management.
+              We combine real-world installation knowledge with digital compliance systems and practical inspection workflows.
             </p>
 
           </div>
@@ -128,7 +148,7 @@ export default function ServicesPage() {
 
       </section>
 
-      {/* SERVICES GRID */}
+      {/* PROJECT TYPES */}
       <section className="border-b border-zinc-900 bg-zinc-950 py-24">
 
         <div className="mx-auto max-w-7xl px-6">
@@ -136,29 +156,29 @@ export default function ServicesPage() {
           <div className="mb-16">
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Services
+              Project Types
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Christchurch Passive Fire Services
+              Buildings & Inspection Environments
             </h2>
 
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-            {services.map((service) => (
+            {projectTypes.map((project) => (
               <div
-                key={service.title}
+                key={project.title}
                 className="rounded-3xl border border-zinc-800 bg-black p-8 transition hover:border-orange-500"
               >
 
                 <h3 className="text-2xl font-bold">
-                  {service.title}
+                  {project.title}
                 </h3>
 
                 <p className="mt-6 leading-8 text-zinc-400">
-                  {service.description}
+                  {project.description}
                 </p>
 
               </div>
@@ -170,40 +190,50 @@ export default function ServicesPage() {
 
       </section>
 
-      {/* INSPECTION WORKFLOW */}
+      {/* COMMON SCOPE */}
       <section className="border-b border-zinc-900 py-24">
 
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-6">
 
-          <div>
+          <div className="mb-16">
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Inspection Workflow
+              Common Scope Of Works
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Structured Inspection & Reporting Systems
+              Inspection & Survey Activities
             </h2>
 
           </div>
 
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
-            <p>
-              Inspection workflows may include:
-              photographs,
-              penetration observations,
-              fire door reviews,
-              compartmentation surveys and defect registers.
-            </p>
+            {[
+              "Passive fire inspections",
+              "Compartmentation surveys",
+              "Fire door inspections",
+              "Service penetration reviews",
+              "Ceiling space inspections",
+              "Fire separation reviews",
+              "Defect identification",
+              "Photographic reporting",
+              "Defect registers",
+              "BWOF remedial support",
+              "Compliance workflow reporting",
+              "Digital inspection systems",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6"
+              >
 
-            <p>
-              These systems help improve visibility of passive fire systems throughout buildings and support compliance management workflows.
-            </p>
+                <p className="text-lg font-semibold">
+                  {item}
+                </p>
 
-            <p>
-              BAKKER PFI LTD uses structured reporting workflows and Codexus digital compliance systems to support passive fire management throughout Christchurch and Canterbury.
-            </p>
+              </div>
+            ))}
 
           </div>
 
@@ -211,42 +241,45 @@ export default function ServicesPage() {
 
       </section>
 
-      {/* EXISTING BUILDINGS */}
+      {/* WORKFLOW */}
       <section className="border-b border-zinc-900 bg-zinc-950 py-24">
 
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-6">
 
-          <div>
+          <div className="mb-16">
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Existing Buildings
+              Workflow
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Common Passive Fire Challenges
+              Structured Inspection & Reporting
             </h2>
 
           </div>
 
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
-            <p>
-              Existing buildings commonly contain passive fire defects resulting from service upgrades,
-              renovations,
-              tenancy fitouts and historical modifications.
-            </p>
+            {workflowSteps.map((step, index) => (
+              <div
+                key={step.title}
+                className="rounded-3xl border border-zinc-800 bg-black p-8"
+              >
 
-            <p>
-              Common issues include:
-              unsealed penetrations,
-              damaged fire separations,
-              missing smoke seals,
-              ceiling void defects and non-compliant fire stopping systems.
-            </p>
+                <p className="text-sm uppercase tracking-[0.3em] text-orange-500">
+                  Step {index + 1}
+                </p>
 
-            <p>
-              These issues are frequently identified during inspections and BWOF-related compliance reviews throughout Christchurch and Canterbury.
-            </p>
+                <h3 className="mt-5 text-2xl font-bold">
+                  {step.title}
+                </h3>
+
+                <p className="mt-6 leading-8 text-zinc-400">
+                  {step.description}
+                </p>
+
+              </div>
+            ))}
 
           </div>
 
@@ -266,7 +299,7 @@ export default function ServicesPage() {
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Digital Passive Fire Workflows
+              Digital Passive Fire Compliance Workflows
             </h2>
 
           </div>
@@ -276,11 +309,15 @@ export default function ServicesPage() {
             <p>
               Codexus is a digital passive fire compliance platform designed to support inspection records,
               defect registers,
-              penetration schedules and compliance workflows.
+              penetration schedules and reporting workflows.
             </p>
 
             <p>
-              The platform is powered by real-world installation and inspection experience provided by BAKKER PFI LTD.
+              The platform is powered by real-world passive fire installation and inspection experience provided by BAKKER PFI LTD.
+            </p>
+
+            <p>
+              These systems help improve visibility of passive fire systems throughout buildings and support structured compliance management workflows.
             </p>
 
             <div className="pt-4">
@@ -315,8 +352,8 @@ export default function ServicesPage() {
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
             Contact Benjamin Bakker to discuss passive fire inspections,
-            fire compartmentation surveys,
-            compliance reporting and BWOF remedial support.
+            compartmentation surveys,
+            compliance reporting and BWOF remedial support throughout Christchurch and Canterbury.
           </p>
 
           <div className="mt-12 flex flex-wrap justify-center gap-4">
@@ -329,10 +366,10 @@ export default function ServicesPage() {
             </Link>
 
             <Link
-              href="/learning"
+              href="/services"
               className="rounded-full border border-zinc-700 px-8 py-4 font-semibold transition hover:border-orange-500 hover:text-orange-500"
             >
-              Passive Fire Learning
+              View Services
             </Link>
 
           </div>

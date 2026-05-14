@@ -1,341 +1,281 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
-import Link from "next/link";
 
-export const metadata = {
-  title: "Passive Fire Awareness Quiz Sydney | BAKKER PFI Australia",
-  description:
-    "Test your understanding of passive fire systems, fire compartmentation and common compliance issues throughout buildings across Sydney and NSW.",
-};
-
-const quizTopics = [
+const questions = [
   {
-    title: "Fire Compartmentation",
-    description:
-      "Understand how buildings are divided into fire compartments to slow the spread of fire and smoke.",
+    question:
+      "What is the main purpose of passive fire protection?",
+    options: [
+      "To extinguish fires automatically",
+      "To slow the spread of fire and smoke",
+      "To replace smoke alarms",
+      "To provide ventilation",
+    ],
+    answer:
+      "To slow the spread of fire and smoke",
   },
   {
-    title: "Fire Doors",
-    description:
-      "Learn how fire doors protect escape routes and maintain compartmentation systems.",
+    question:
+      "What is fire compartmentation?",
+    options: [
+      "A ventilation system",
+      "A sprinkler system",
+      "Dividing a building into fire-rated compartments",
+      "A smoke alarm network",
+    ],
+    answer:
+      "Dividing a building into fire-rated compartments",
   },
   {
-    title: "Service Penetrations",
-    description:
-      "Understand how pipes, cables and ducts passing through fire-rated barriers must be protected.",
+    question:
+      "What commonly passes through fire-rated walls and floors requiring fire stopping protection?",
+    options: [
+      "Furniture",
+      "Lighting only",
+      "Pipes, cables and ducts",
+      "Windows",
+    ],
+    answer:
+      "Pipes, cables and ducts",
   },
   {
-    title: "Fire Stopping Systems",
-    description:
-      "Learn about fire collars, sealants, wraps and penetration sealing systems.",
+    question:
+      "Why are fire doors important?",
+    options: [
+      "They improve air conditioning",
+      "They help maintain compartmentation and protect escape routes",
+      "They reduce lighting costs",
+      "They are decorative only",
+    ],
+    answer:
+      "They help maintain compartmentation and protect escape routes",
   },
   {
-    title: "Common Passive Fire Defects",
-    description:
-      "Identify common issues affecting compartmentation performance throughout buildings.",
-  },
-  {
-    title: "Inspection & Compliance",
-    description:
-      "Understand how passive fire inspections and compliance workflows support building fire safety.",
+    question:
+      "What is a common passive fire defect identified during inspections?",
+    options: [
+      "Paint colour changes",
+      "Broken ceiling tiles only",
+      "Unsealed service penetrations",
+      "Loose carpet edges",
+    ],
+    answer:
+      "Unsealed service penetrations",
   },
 ];
 
 export default function QuizPage() {
+
+  const router = useRouter();
+
+  const [currentQuestion, setCurrentQuestion] =
+    useState(0);
+
+  const [score, setScore] =
+    useState(0);
+
+  const [selectedAnswer, setSelectedAnswer] =
+    useState("");
+
+  const [showResult, setShowResult] =
+    useState(false);
+
+  const [name, setName] =
+    useState("");
+
+  const handleAnswer = () => {
+
+    if (
+      selectedAnswer ===
+      questions[currentQuestion].answer
+    ) {
+      setScore(score + 1);
+    }
+
+    setSelectedAnswer("");
+
+    if (
+      currentQuestion + 1 <
+      questions.length
+    ) {
+      setCurrentQuestion(
+        currentQuestion + 1
+      );
+    } else {
+      setShowResult(true);
+    }
+  };
+
+  const passed =
+    score >= 4;
+
   return (
     <main className="min-h-screen bg-black text-white">
 
       <Navbar />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-zinc-900 py-32">
+      <section className="relative overflow-hidden border-b border-zinc-900 py-24">
 
         {/* BACKGROUND */}
         <div className="absolute inset-0">
 
           <img
-            src="/learning/fire-compartment-diagram.png"
-            alt="Passive Fire Awareness Quiz"
+            src="/christchurch.png"
+            alt="Christchurch Passive Fire Quiz"
             className="h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/70" />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-black/60" />
 
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Passive Fire Awareness Sydney
+            Christchurch Passive Fire Learning
           </p>
 
-          <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-            Passive Fire
-            <br />
-            Awareness Quiz
+          <h1 className="text-5xl font-bold leading-tight md:text-7xl">
+            Passive Fire Awareness Quiz
           </h1>
 
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            Test your understanding of passive fire systems,
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
+            Test your understanding of passive fire protection,
             fire compartmentation,
-            fire doors and common compliance issues identified throughout buildings across Sydney and NSW.
+            service penetrations and fire door systems.
           </p>
 
         </div>
 
       </section>
 
-      {/* INTRO */}
-      <section className="border-b border-zinc-900 py-24">
+      {/* QUIZ */}
+      <section className="py-24">
 
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+        <div className="mx-auto max-w-4xl px-6">
 
-          <div>
+          {!showResult ? (
 
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Passive Fire Learning
-            </p>
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-10">
 
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Building Awareness Through Education
-            </h2>
+              <p className="text-sm uppercase tracking-[0.3em] text-orange-500">
+                Question {currentQuestion + 1} of {questions.length}
+              </p>
 
-          </div>
+              <h2 className="mt-6 text-3xl font-bold leading-tight md:text-5xl">
+                {questions[currentQuestion].question}
+              </h2>
 
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+              <div className="mt-12 space-y-4">
 
-            <p>
-              Passive fire systems are often misunderstood despite playing a critical role in protecting buildings,
-              evacuation pathways and occupants during a fire event.
-            </p>
-
-            <p>
-              This awareness quiz has been developed to help building owners,
-              facility managers,
-              strata managers,
-              contractors and general building users better understand passive fire protection systems.
-            </p>
-
-            <p>
-              The quiz focuses on practical passive fire concepts commonly identified during inspections and compliance reviews throughout Sydney and NSW.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* QUIZ TOPICS */}
-      <section className="border-b border-zinc-900 py-24">
-
-        <div className="mx-auto max-w-7xl px-6">
-
-          <div className="max-w-4xl">
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Quiz Topics
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              What The Quiz Covers
-            </h2>
-
-          </div>
-
-          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-            {quizTopics.map((topic) => (
-              <div
-                key={topic.title}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8"
-              >
-
-                <h3 className="text-2xl font-bold">
-                  {topic.title}
-                </h3>
-
-                <p className="mt-6 leading-8 text-zinc-400">
-                  {topic.description}
-                </p>
+                {questions[currentQuestion].options.map(
+                  (option) => (
+                    <button
+                      key={option}
+                      onClick={() =>
+                        setSelectedAnswer(option)
+                      }
+                      className={`w-full rounded-2xl border px-6 py-5 text-left text-lg transition ${
+                        selectedAnswer === option
+                          ? "border-orange-500 bg-orange-500 text-black"
+                          : "border-zinc-700 bg-black text-white hover:border-orange-500"
+                      }`}
+                    >
+                      {option}
+                    </button>
+                  )
+                )}
 
               </div>
-            ))}
 
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* CERTIFICATE */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          {/* IMAGE */}
-          <div className="overflow-hidden rounded-3xl border border-zinc-800">
-
-            <img
-              src="/learning/fire-stopping-example.png"
-              alt="Passive Fire Awareness Certificate"
-              className="h-full w-full object-cover"
-            />
-
-          </div>
-
-          {/* CONTENT */}
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Awareness Certificate
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Passive Fire Awareness Certificate
-            </h2>
-
-            <div className="mt-10 space-y-8 text-lg leading-8 text-zinc-400">
-
-              <p>
-                Participants completing the quiz can generate a personalised Passive Fire Awareness Certificate.
-              </p>
-
-              <p>
-                The certificate is intended as an educational awareness tool helping improve understanding of passive fire systems and compartmentation principles.
-              </p>
-
-              <p>
-                This learning resource does not replace formal competency training,
-                accreditation or certification requirements associated with building compliance and fire safety systems.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* START QUIZ */}
-      <section className="border-b border-zinc-900 py-24">
-
-        <div className="mx-auto max-w-5xl px-6 text-center">
-
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Interactive Learning
-          </p>
-
-          <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Start The Passive Fire Awareness Quiz
-          </h2>
-
-          <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
-            Test your understanding of passive fire systems,
-            fire compartmentation,
-            fire doors and service penetration protection systems.
-          </p>
-
-          <div className="mt-14">
-
-<Link
-  href="/learning/quiz/start"
-              className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
-            >
-              Start Quiz
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* CODEXUS */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Codexus Compliance Systems
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Digital Compliance Workflows
-            </h2>
-
-          </div>
-
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
-
-            <p>
-              Codexus is a digital passive fire compliance platform supporting inspections,
-              penetration records,
-              defect registers and compartmentation workflows.
-            </p>
-
-            <p>
-              The platform is powered by real-world inspection and installation knowledge provided by BAKKER PFI Australia.
-            </p>
-
-            <div className="pt-4">
-
-              <Link
-                href="/codexus"
-                className="inline-flex rounded-full border border-orange-500 px-8 py-4 font-semibold text-orange-500 transition hover:bg-orange-500 hover:text-black"
+              <button
+                onClick={handleAnswer}
+                disabled={!selectedAnswer}
+                className="mt-10 rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400 disabled:cursor-not-allowed disabled:opacity-40"
               >
-                Explore Codexus
-              </Link>
+                Next Question
+              </button>
 
             </div>
 
-          </div>
+          ) : (
 
-        </div>
+            <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-12 text-center">
 
-      </section>
+              <p className="text-sm uppercase tracking-[0.3em] text-orange-500">
+                Quiz Complete
+              </p>
 
-      {/* CTA */}
-      <section className="py-32">
+              <h2 className="mt-6 text-5xl font-bold">
+                Your Score: {score}/{questions.length}
+              </h2>
 
-        <div className="mx-auto max-w-5xl px-6 text-center">
+              {passed ? (
 
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney & NSW
-          </p>
+                <div>
 
-          <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Passive Fire Inspection Support
-          </h2>
+                  <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
+                    Congratulations.
+                    You have successfully completed the Christchurch Passive Fire Awareness Quiz.
+                  </p>
 
-          <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
-            Contact Benjamin Bakker to discuss passive fire inspections,
-            fire compartmentation reviews,
-            compliance workflows and passive fire awareness education throughout Sydney and NSW.
-          </p>
+                  {/* NAME INPUT */}
+                  <div className="mx-auto mt-12 max-w-xl">
 
-          <div className="mt-14 flex flex-wrap justify-center gap-4">
+                    <input
+                      type="text"
+                      placeholder="Enter your name for the certificate"
+                      value={name}
+                      onChange={(e) =>
+                        setName(e.target.value)
+                      }
+                      className="w-full rounded-2xl border border-zinc-700 bg-black px-6 py-5 text-lg text-white outline-none transition focus:border-orange-500"
+                    />
 
-            <Link
-              href="/contact"
-              className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
-            >
-              Contact BAKKER PFI Australia
-            </Link>
+                  </div>
 
-            <Link
-              href="/learning"
-              className="rounded-full border border-zinc-700 px-10 py-5 text-lg font-semibold transition hover:border-orange-500 hover:text-orange-500"
-            >
-              Back To Learning Centre
-            </Link>
+                  {/* BUTTON */}
+                  <button
+                    onClick={() =>
+                      router.push(
+                        `/learning/certificate?name=${encodeURIComponent(name || "Participant")}`
+                      )
+                    }
+                    className="mt-8 rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
+                  >
+                    Generate Certificate
+                  </button>
 
-          </div>
+                </div>
+
+              ) : (
+
+                <div>
+
+                  <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-300">
+                    You did not achieve a passing score.
+                    Review the learning pages and try again.
+                  </p>
+
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="mt-10 rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
+                  >
+                    Retry Quiz
+                  </button>
+
+                </div>
+
+              )}
+
+            </div>
+
+          )}
 
         </div>
 

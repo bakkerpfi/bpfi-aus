@@ -2,9 +2,9 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Passive Fire Inspections Sydney | BAKKER PFI Australia",
+  title: "Passive Fire Inspections Christchurch | BAKKER PFI LTD",
   description:
-    "Passive fire inspection and compliance reporting services across Sydney and NSW including fire compartmentation, fire doors and penetration inspections.",
+    "Passive fire inspection and compliance reporting services across Christchurch and Canterbury including fire compartmentation, fire doors and penetration inspections.",
 };
 
 export default function InspectionsCompliancePage() {
@@ -20,14 +20,14 @@ export default function InspectionsCompliancePage() {
         <div className="absolute inset-0">
 
           <img
-            src="/sydney.png"
-            alt="Sydney Passive Fire Inspections"
+            src="/christchurch.png"
+            alt="Christchurch Passive Fire Inspections"
             className="h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/20" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
 
         </div>
 
@@ -35,7 +35,7 @@ export default function InspectionsCompliancePage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney Passive Fire Compliance
+            Christchurch Passive Fire Compliance
           </p>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
@@ -44,9 +44,9 @@ export default function InspectionsCompliancePage() {
             & Compliance Reporting
           </h1>
 
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-200">
             Understanding how passive fire inspections,
-            compartmentation reviews and compliance reporting support building fire safety across Sydney and NSW.
+            compartmentation reviews and compliance reporting support building fire safety across Christchurch and Canterbury.
           </p>
 
         </div>
@@ -97,7 +97,7 @@ export default function InspectionsCompliancePage() {
 
       </section>
 
-      {/* AFSS */}
+      {/* BWOF */}
       <section className="border-b border-zinc-900 bg-zinc-950 py-24">
 
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
@@ -105,11 +105,11 @@ export default function InspectionsCompliancePage() {
           <div>
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              AFSS & Compliance
+              BWOF & Compliance
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Supporting NSW Building Compliance
+              Supporting Building Compliance Workflows
             </h2>
 
           </div>
@@ -117,19 +117,19 @@ export default function InspectionsCompliancePage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Throughout NSW,
-              passive fire inspections form part of the overall building fire safety strategy and support compliance management processes associated with Annual Fire Safety Statements (AFSS).
+              Passive fire inspections can support compliance workflows associated with Building Warrants of Fitness (BWOF),
+              IQP inspections and ongoing building maintenance programmes.
             </p>
 
             <p>
-              Passive fire systems contribute to the performance of Essential Fire Safety Measures (EFSM)
-              by helping maintain fire compartmentation throughout buildings.
+              Inspection reports help identify passive fire defects,
+              document building conditions
+              and support remedial planning for fire compartmentation systems.
             </p>
 
             <p>
-              During inspections,
-              passive fire defects may be identified and documented to support remediation planning,
-              compliance reporting and ongoing building maintenance workflows.
+              These workflows improve visibility of passive fire systems throughout existing buildings
+              and assist building owners and facility managers with understanding compliance risks.
             </p>
 
           </div>
@@ -138,44 +138,47 @@ export default function InspectionsCompliancePage() {
 
       </section>
 
-      {/* COMMON DEFECTS */}
+      {/* INSPECTION AREAS */}
       <section className="border-b border-zinc-900 py-24">
 
         <div className="mx-auto max-w-7xl px-6">
 
-          <div className="max-w-4xl">
+          <div className="mb-16">
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Common Inspection Findings
+              Inspection Scope
             </p>
 
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Typical Passive Fire Defects
+            <h2 className="text-4xl font-bold md:text-6xl">
+              Typical Survey Areas
             </h2>
 
           </div>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
             {[
-              "Unsealed service penetrations",
-              "Damaged fire-rated walls",
-              "Non-compliant fire stopping systems",
-              "Missing fire collars",
-              "Excessive fire door gaps",
-              "Missing smoke seals",
-              "Compromised ceiling barriers",
-              "Damaged fire doors",
-              "Unprotected cable penetrations",
+              "Fire doors",
+              "Service penetrations",
+              "Risers & shafts",
+              "Fire & smoke separations",
+              "Fire-rated walls",
+              "Fire-rated floors",
+              "Ceiling compartmentation",
+              "Plant rooms",
+              "Escape routes",
+              "Compliance schedule systems",
+              "Passive fire barriers",
+              "Existing building defects",
             ].map((item) => (
               <div
                 key={item}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8"
+                className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 transition hover:border-orange-500"
               >
 
-                <h3 className="text-2xl font-bold">
+                <p className="text-xl font-semibold leading-8">
                   {item}
-                </h3>
+                </p>
 
               </div>
             ))}
@@ -186,7 +189,7 @@ export default function InspectionsCompliancePage() {
 
       </section>
 
-      {/* INSPECTION PROCESS */}
+      {/* PROCESS */}
       <section className="border-b border-zinc-900 py-24">
 
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
@@ -198,7 +201,7 @@ export default function InspectionsCompliancePage() {
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              How Passive Fire Inspections Work
+              Structured Inspection & Reporting
             </h2>
 
           </div>
@@ -206,28 +209,22 @@ export default function InspectionsCompliancePage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Passive fire inspections generally involve reviewing fire compartmentation systems throughout a building,
-              identifying defects and documenting non-compliant conditions.
+              BAKKER PFI LTD uses structured inspection workflows designed to improve visibility of passive fire systems throughout buildings.
             </p>
 
             <p>
-              This may include inspection of service penetrations,
-              fire-rated walls,
-              ceiling barriers,
-              fire doors,
-              risers,
-              shafts and concealed spaces.
+              Inspection records may include:
+              photographs,
+              penetration records,
+              defect identification,
+              fire door observations,
+              compartmentation reviews and compliance reporting.
             </p>
 
             <p>
-              Inspection findings are commonly documented using photographs,
-              defect registers,
-              floor plans and compliance reporting workflows.
-            </p>
-
-            <p>
-              BAKKER PFI Australia uses structured inspection workflows and Codexus digital compliance systems
-              to help organise passive fire information and support compliance visibility throughout buildings.
+              These workflows support BWOF compliance visibility,
+              defect management
+              and passive fire reporting throughout Christchurch and Canterbury.
             </p>
 
           </div>
@@ -262,7 +259,7 @@ export default function InspectionsCompliancePage() {
             </p>
 
             <p>
-              The platform is powered by real-world passive fire inspection and installation knowledge provided by BAKKER PFI Australia.
+              The platform is powered by real-world passive fire inspection and installation knowledge provided by BAKKER PFI LTD.
             </p>
 
             <div className="pt-4">
@@ -288,7 +285,7 @@ export default function InspectionsCompliancePage() {
         <div className="mx-auto max-w-5xl px-6 text-center">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney & NSW
+            Christchurch & Canterbury
           </p>
 
           <h2 className="text-4xl font-bold leading-tight md:text-6xl">
@@ -298,7 +295,7 @@ export default function InspectionsCompliancePage() {
           <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
             Contact Benjamin Bakker to discuss passive fire inspections,
             compartmentation surveys,
-            defect reporting and compliance workflows throughout Sydney and NSW.
+            defect reporting and compliance workflows throughout Christchurch and Canterbury.
           </p>
 
           <div className="mt-14 flex flex-wrap justify-center gap-4">
@@ -307,7 +304,7 @@ export default function InspectionsCompliancePage() {
               href="/contact"
               className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
             >
-              Contact BAKKER PFI Australia
+              Contact BAKKER PFI LTD
             </Link>
 
             <Link

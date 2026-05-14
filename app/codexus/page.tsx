@@ -1,69 +1,139 @@
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
+
+export const metadata = {
+  title: "Codexus Compliance Systems | BAKKER PFI LTD",
+  description:
+    "Codexus is a digital passive fire compliance platform supporting inspections, defect registers, penetration schedules and compliance workflows throughout Christchurch and Canterbury.",
+};
+
+const features = [
+  {
+    title: "Inspection Records",
+    description:
+      "Organise passive fire inspection records, observations and photographic documentation.",
+  },
+  {
+    title: "Defect Registers",
+    description:
+      "Track passive fire defects, compartmentation issues and remediation workflows.",
+  },
+  {
+    title: "Penetration Schedules",
+    description:
+      "Manage service penetration records and fire stopping observations throughout buildings.",
+  },
+  {
+    title: "Fire Door Workflows",
+    description:
+      "Document fire door inspections, smoke seal defects and compartmentation issues.",
+  },
+  {
+    title: "Compliance Reporting",
+    description:
+      "Structured reporting workflows supporting passive fire compliance visibility.",
+  },
+  {
+    title: "Digital Building Records",
+    description:
+      "Centralised passive fire records supporting ongoing building compliance management.",
+  },
+];
 
 export default function CodexusPage() {
-
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[#050816] text-white">
 
       <Navbar />
 
       {/* HERO */}
-      <section className="relative overflow-hidden border-b border-zinc-800">
+      <section className="relative overflow-hidden border-b border-blue-950 py-32">
 
-        <div className="mx-auto max-w-7xl px-6 py-32">
+        {/* BACKGROUND */}
+        <div className="absolute inset-0">
 
-          <p className="mb-6 text-sm uppercase tracking-[0.4em] text-orange-500">
+          <img
+            src="/christchurch.png"
+            alt="Codexus Compliance Systems"
+            className="h-full w-full object-cover opacity-25"
+          />
+
+          <div className="absolute inset-0 bg-[#050816]/80" />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050816] via-[#050816]/70 to-transparent" />
+
+        </div>
+
+        {/* GRID OVERLAY */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(59,130,246,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.15) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+
+        {/* CONTENT */}
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
+
+          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-blue-400">
             Codexus Compliance Systems
           </p>
 
-          <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-            Passive Fire Compliance Intelligence
-            Powered by BAKKER PFI
+          <h1 className="max-w-6xl text-5xl font-bold leading-tight md:text-7xl">
+            Digital Passive Fire
+            <br />
+            Compliance Workflows
           </h1>
 
-          <p className="mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
-            Codexus is a passive fire compliance platform designed to organise,
-            track and manage passive fire information across buildings,
-            inspections, penetrations, defect registers and compliance reporting.
+          <p className="mt-10 max-w-3xl text-xl leading-10 text-zinc-300">
+            Codexus is a digital passive fire compliance platform designed to support inspections,
+            defect registers,
+            penetration schedules,
+            compartmentation visibility and compliance workflows throughout existing buildings.
           </p>
 
         </div>
 
       </section>
 
-      {/* WHAT IS CODEXUS */}
-      <section className="border-b border-zinc-800 bg-zinc-950">
+      {/* INTRO */}
+      <section className="border-b border-blue-950 py-24">
 
-        <div className="mx-auto grid max-w-7xl gap-20 px-6 py-28 md:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
+          {/* LEFT */}
           <div>
 
-            <p className="mb-6 text-sm uppercase tracking-[0.4em] text-orange-500">
-              What Is Codexus?
+            <p className="mb-3 text-sm uppercase tracking-[0.35em] text-blue-400">
+              Powered By Real Industry Experience
             </p>
 
-            <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-              A Digital Passive Fire Compliance System
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Built From Real Passive Fire Workflows
             </h2>
 
           </div>
 
-          <div className="space-y-8 text-lg leading-9 text-zinc-400">
+          {/* RIGHT */}
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Passive fire information is often fragmented across reports,
-              photos, contractor records, drawings and fire safety documentation.
+              Codexus has been developed using real-world passive fire inspection,
+              installation and compliance reporting experience provided by BAKKER PFI LTD.
             </p>
 
             <p>
-              Codexus was developed to bring this information together into
-              one structured compliance workflow.
+              The platform is designed to improve visibility of passive fire systems throughout buildings,
+              helping organise inspection records,
+              defect registers,
+              fire door observations and penetration schedules.
             </p>
 
             <p>
-              The platform helps organise inspections, identify defects,
-              manage fire stopping information and create digital compliance records
-              for buildings and facility managers.
+              Unlike theoretical software systems,
+              Codexus is built around practical field workflows and real compliance challenges experienced within existing buildings.
             </p>
 
           </div>
@@ -72,39 +142,92 @@ export default function CodexusPage() {
 
       </section>
 
-      {/* POWERED BY BAKKER PFI */}
-      <section className="border-b border-zinc-800">
+      {/* CHRISTCHURCH SECTION */}
+      <section className="border-b border-blue-950 bg-[#091120] py-24">
 
-        <div className="mx-auto grid max-w-7xl gap-20 px-6 py-28 md:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
+          {/* LEFT */}
           <div>
 
-            <p className="mb-6 text-sm uppercase tracking-[0.4em] text-orange-500">
-              Powered by BAKKER PFI
+            <p className="mb-3 text-sm uppercase tracking-[0.35em] text-blue-400">
+              Christchurch & Existing Buildings
             </p>
 
-            <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-              Real Inspection Knowledge Drives The Platform
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Supporting Passive Fire Compliance Visibility
             </h2>
 
           </div>
 
-          <div className="space-y-8 text-lg leading-9 text-zinc-400">
+          {/* RIGHT */}
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Codexus is powered by real-world passive fire inspections,
-              compartmentation surveys, compliance reporting and field installation experience.
+              Codexus supports passive fire inspection and compliance workflows throughout existing buildings across Christchurch and Canterbury.
             </p>
 
             <p>
-              BAKKER PFI performs inspections, identifies defects,
-              documents penetrations, reviews tested systems and feeds
-              structured field information into the Codexus workflow.
+              The platform helps organise:
             </p>
 
+            <ul className="space-y-3 pl-6 text-zinc-300">
+
+              <li>• Inspection records</li>
+              <li>• Defect registers</li>
+              <li>• Penetration schedules</li>
+              <li>• Fire door observations</li>
+              <li>• Compartmentation reviews</li>
+              <li>• Photographic reporting</li>
+              <li>• Compliance workflows</li>
+
+            </ul>
+
             <p>
-              Codexus is only as intelligent as the quality of the information entered into it.
+              These systems help improve visibility of passive fire systems throughout buildings and support structured compliance management workflows.
             </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FEATURES */}
+      <section className="border-b border-blue-950 py-24">
+
+        <div className="mx-auto max-w-7xl px-6">
+
+          <div className="mb-16">
+
+            <p className="mb-3 text-sm uppercase tracking-[0.35em] text-blue-400">
+              Platform Features
+            </p>
+
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Compliance Workflow Systems
+            </h2>
+
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-3xl border border-blue-950 bg-[#091120] p-8 transition hover:border-blue-500"
+              >
+
+                <h3 className="text-2xl font-bold">
+                  {feature.title}
+                </h3>
+
+                <p className="mt-6 leading-8 text-zinc-400">
+                  {feature.description}
+                </p>
+
+              </div>
+            ))}
 
           </div>
 
@@ -113,129 +236,81 @@ export default function CodexusPage() {
       </section>
 
       {/* WORKFLOW */}
-      <section className="border-b border-zinc-800 bg-zinc-950">
+      <section className="border-b border-blue-950 bg-[#091120] py-24">
 
-        <div className="mx-auto max-w-7xl px-6 py-28">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
-          <div className="max-w-4xl">
+          {/* LEFT */}
+          <div>
 
-            <p className="mb-6 text-sm uppercase tracking-[0.4em] text-orange-500">
-              Compliance Workflow
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-              How Information Flows Through Codexus
-            </h2>
-
-          </div>
-
-          <div className="mt-20 grid gap-8 md:grid-cols-3">
-
-            {[
-              "Inspection",
-              "Defect Identification",
-              "Photo Documentation",
-              "System Verification",
-              "Codexus Processing",
-              "Compliance Reporting",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="rounded-3xl border border-zinc-800 bg-black p-10 text-center"
-              >
-
-                <div className="mb-6 text-5xl font-bold text-orange-500">
-                  {index + 1}
-                </div>
-
-                <h3 className="text-2xl font-bold">
-                  {item}
-                </h3>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* OUTPUTS */}
-      <section className="border-b border-zinc-800">
-
-        <div className="mx-auto max-w-7xl px-6 py-28">
-
-          <div className="max-w-4xl">
-
-            <p className="mb-6 text-sm uppercase tracking-[0.4em] text-orange-500">
-              Compliance Outputs
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-              What Codexus Produces
-            </h2>
-
-          </div>
-
-          <div className="mt-20 grid gap-8 md:grid-cols-3">
-
-            {[
-              "Passive Fire Reports",
-              "Compartmentation Surveys",
-              "Defect Registers",
-              "Penetration Registers",
-              "Fire Stopping Schedules",
-              "Photo Documentation",
-              "QA Records",
-              "Compliance Pathways",
-              "Digital Building Records",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8"
-              >
-
-                <h3 className="text-2xl font-bold">
-                  {item}
-                </h3>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* FUTURE */}
-      <section>
-
-        <div className="mx-auto max-w-7xl px-6 py-32">
-
-          <div className="max-w-5xl">
-
-            <p className="mb-6 text-sm uppercase tracking-[0.4em] text-orange-500">
-              Future Vision
+            <p className="mb-3 text-sm uppercase tracking-[0.35em] text-blue-400">
+              Workflow Integration
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Building The Future Of Passive Fire Compliance
+              Connecting Inspection & Compliance Systems
             </h2>
 
-            <p className="mt-10 text-xl leading-10 text-zinc-400">
-              Codexus is being developed as a next-generation passive fire
-              compliance ecosystem focused on digital building records,
-              compliance traceability, QR-linked penetrations,
-              live compliance workflows and intelligent reporting systems.
+          </div>
+
+          {/* RIGHT */}
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+
+            <p>
+              Codexus is designed to connect inspection workflows,
+              penetration records,
+              fire door observations and reporting systems into one structured compliance environment.
             </p>
 
-            <p className="mt-8 text-xl leading-10 text-zinc-400">
-              The long-term vision is to improve visibility,
-              accountability and understanding of passive fire systems
-              throughout the lifecycle of a building.
+            <p>
+              This helps improve consistency of passive fire records throughout buildings and supports ongoing compliance visibility.
             </p>
+
+            <p>
+              The platform continues evolving alongside real passive fire inspection and remediation workflows undertaken by BAKKER PFI LTD across New Zealand,
+              Australia and Singapore.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CTA */}
+      <section className="py-32">
+
+        <div className="mx-auto max-w-5xl px-6 text-center">
+
+          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-blue-400">
+            Codexus Compliance Systems
+          </p>
+
+          <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+            Digital Passive Fire Compliance
+          </h2>
+
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+            Learn how Codexus and BAKKER PFI LTD support passive fire inspections,
+            compartmentation surveys,
+            defect registers and compliance workflows throughout Christchurch and Canterbury.
+          </p>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+
+            <Link
+              href="/contact"
+              className="rounded-full bg-blue-500 px-8 py-4 font-semibold text-black transition hover:bg-blue-400"
+            >
+              Contact BAKKER PFI LTD
+            </Link>
+
+            <Link
+              href="/services"
+              className="rounded-full border border-blue-800 px-8 py-4 font-semibold transition hover:border-blue-500 hover:text-blue-400"
+            >
+              View Services
+            </Link>
 
           </div>
 

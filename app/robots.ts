@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
     },
 
     sitemap:
-      "https://www.bakkerpfi.sg/sitemap.xml",
+      "https://www.bakkerpfi.co.nz/sitemap.xml",
   };
 }

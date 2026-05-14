@@ -2,41 +2,41 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Service Penetration Inspections Sydney | BAKKER PFI Australia",
+  title: "Service Penetrations Christchurch | BAKKER PFI LTD",
   description:
-    "Learn about passive fire service penetrations, fire stopping systems and common penetration defects identified throughout buildings across Sydney and NSW.",
+    "Learn about passive fire service penetrations, fire stopping systems and compartmentation compliance throughout Christchurch and Canterbury.",
 };
 
-const penetrationDefects = [
+const penetrationTypes = [
   {
-    title: "Unsealed Cable Penetrations",
+    title: "Plastic Pipes",
     description:
-      "Cables passing through fire-rated walls and floors without compliant fire stopping protection.",
+      "Plastic pipes can melt during fire exposure and require tested fire stopping systems such as fire collars or wraps.",
   },
   {
-    title: "Oversized Openings",
+    title: "Metal Pipes",
     description:
-      "Large openings around services can compromise fire compartmentation performance.",
+      "Metal service penetrations require tested sealing systems to maintain fire compartmentation performance.",
   },
   {
-    title: "Missing Fire Collars",
+    title: "Electrical Cables",
     description:
-      "Plastic pipes penetrating fire-rated barriers without compliant fire collars or wraps.",
+      "Cable penetrations passing through fire-rated barriers require compliant fire stopping protection.",
   },
   {
-    title: "Incorrect Sealants",
+    title: "Cable Trays",
     description:
-      "Use of non-tested products such as foam or standard silicone instead of compliant fire stopping systems.",
+      "Large cable tray openings can create significant compartmentation risks if left unprotected.",
   },
   {
-    title: "Damaged Fire Stopping",
+    title: "HVAC Ducts",
     description:
-      "Previously installed systems that have been damaged during later service modifications.",
+      "Mechanical duct penetrations often require fire dampers and tested fire-rated sealing systems.",
   },
   {
-    title: "Open Service Risers",
+    title: "Mixed Services",
     description:
-      "Unprotected service risers and shafts allowing fire and smoke spread between floors.",
+      "Openings containing multiple services require carefully selected tested systems to maintain fire ratings.",
   },
 ];
 
@@ -53,14 +53,14 @@ export default function ServicePenetrationsPage() {
         <div className="absolute inset-0">
 
           <img
-            src="/learning/unsealed-penetration.png"
-            alt="Service Penetration Inspections Sydney"
+            src="/learning/fire-stopping-example.png"
+            alt="Passive Fire Service Penetrations Christchurch"
             className="h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/60" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
         </div>
 
@@ -68,7 +68,7 @@ export default function ServicePenetrationsPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Passive Fire Penetrations Sydney
+            Christchurch Passive Fire Compliance
           </p>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
@@ -78,8 +78,8 @@ export default function ServicePenetrationsPage() {
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            Understanding how service penetrations affect fire compartmentation
-            and why compliant fire stopping systems are critical throughout buildings across Sydney and NSW.
+            Understanding service penetrations,
+            fire stopping systems and fire compartmentation throughout buildings across Christchurch and Canterbury.
           </p>
 
         </div>
@@ -106,19 +106,20 @@ export default function ServicePenetrationsPage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Service penetrations occur where pipes,
+              Service penetrations are openings created when pipes,
               cables,
-              conduits,
-              ducts and other building services pass through fire-rated walls and floors.
+              ducts or other services pass through fire-rated walls or floors.
             </p>
 
             <p>
-              These openings can compromise fire compartmentation if they are not properly protected using compliant fire stopping systems.
+              These openings must be protected using tested fire stopping systems designed to maintain the fire resistance performance of the barrier.
             </p>
 
             <p>
-              Throughout Sydney and NSW,
-              penetration defects are commonly identified during passive fire inspections and remediation projects within existing buildings.
+              Throughout Christchurch and Canterbury,
+              penetration defects are commonly identified during BWOF inspections,
+              fitouts,
+              remediation projects and existing building reviews.
             </p>
 
           </div>
@@ -127,88 +128,37 @@ export default function ServicePenetrationsPage() {
 
       </section>
 
-      {/* WHY IT MATTERS */}
+      {/* TYPES */}
       <section className="border-b border-zinc-900 bg-zinc-950 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          {/* IMAGE */}
-          <div className="overflow-hidden rounded-3xl border border-zinc-800">
-
-            <img
-              src="/learning/fire-stopping-example.png"
-              alt="Fire Stopping Systems"
-              className="h-full w-full object-cover"
-            />
-
-          </div>
-
-          {/* CONTENT */}
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Fire Compartmentation
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Why Penetrations Matter
-            </h2>
-
-            <div className="mt-10 space-y-8 text-lg leading-8 text-zinc-400">
-
-              <p>
-                Fire-rated walls and floors are designed to slow the spread of fire and smoke between compartments.
-              </p>
-
-              <p>
-                Unprotected penetrations can create pathways allowing fire,
-                smoke and hot gases to spread rapidly throughout a building.
-              </p>
-
-              <p>
-                Many penetration defects remain hidden above ceilings,
-                within risers and service shafts until inspections are carried out.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* COMMON DEFECTS */}
-      <section className="border-b border-zinc-900 py-24">
 
         <div className="mx-auto max-w-7xl px-6">
 
-          <div className="max-w-4xl">
+          <div className="mb-16">
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Common Inspection Findings
+              Common Penetration Types
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Typical Penetration Defects
+              Typical Services Found In Buildings
             </h2>
 
           </div>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-            {penetrationDefects.map((defect) => (
+            {penetrationTypes.map((item) => (
               <div
-                key={defect.title}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8"
+                key={item.title}
+                className="rounded-3xl border border-zinc-800 bg-black p-8"
               >
 
                 <h3 className="text-2xl font-bold">
-                  {defect.title}
+                  {item.title}
                 </h3>
 
                 <p className="mt-6 leading-8 text-zinc-400">
-                  {defect.description}
+                  {item.description}
                 </p>
 
               </div>
@@ -220,7 +170,45 @@ export default function ServicePenetrationsPage() {
 
       </section>
 
-      {/* FIRE STOPPING SYSTEMS */}
+      {/* WHY FIRE STOPPING MATTERS */}
+      <section className="border-b border-zinc-900 py-24">
+
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+
+          <div>
+
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Why Fire Stopping Matters
+            </p>
+
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Maintaining Fire Compartmentation
+            </h2>
+
+          </div>
+
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+
+            <p>
+              Fire compartmentation systems are designed to slow the spread of fire and smoke throughout buildings.
+            </p>
+
+            <p>
+              Unprotected penetrations can create direct pathways for smoke,
+              heat and fire to spread between fire compartments.
+            </p>
+
+            <p>
+              Properly selected tested systems help maintain the fire resistance performance of walls and floors.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* COMMON DEFECTS */}
       <section className="border-b border-zinc-900 bg-zinc-950 py-24">
 
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
@@ -228,11 +216,11 @@ export default function ServicePenetrationsPage() {
           <div>
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Fire Stopping Systems
+              Common Defects
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Common Protection Systems
+              Typical Penetration Issues
             </h2>
 
           </div>
@@ -240,33 +228,20 @@ export default function ServicePenetrationsPage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Different service types and substrates require different fire stopping systems depending on the tested application.
+              Common passive fire defects include:
+              unsealed openings,
+              incorrect products,
+              damaged seals,
+              foam fillers,
+              oversized openings and untested systems.
             </p>
 
             <p>
-              Common passive fire systems include:
+              Service upgrades and tenant fitouts frequently create new penetrations that may not be properly protected.
             </p>
 
-            <ul className="space-y-4 pl-6 text-zinc-300 list-disc">
-
-              <li>Fire collars</li>
-
-              <li>Fire wraps</li>
-
-              <li>Fire-rated sealants</li>
-
-              <li>Coated batts</li>
-
-              <li>Fire pillows</li>
-
-              <li>Mortar systems</li>
-
-            </ul>
-
             <p>
-              Correct system selection depends on the service type,
-              substrate,
-              fire rating and tested system requirements.
+              These issues are commonly identified during inspections throughout existing buildings across Christchurch and Canterbury.
             </p>
 
           </div>
@@ -275,7 +250,7 @@ export default function ServicePenetrationsPage() {
 
       </section>
 
-      {/* INSPECTION WORKFLOW */}
+      {/* INSPECTIONS */}
       <section className="border-b border-zinc-900 py-24">
 
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
@@ -283,11 +258,11 @@ export default function ServicePenetrationsPage() {
           <div>
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Inspection Workflow
+              Inspection & Reporting
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Inspection & Reporting
+              Structured Compliance Workflows
             </h2>
 
           </div>
@@ -295,29 +270,21 @@ export default function ServicePenetrationsPage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Passive fire penetration inspections commonly involve reviewing service penetrations throughout a building and identifying defects affecting fire compartmentation.
+              Penetration inspections commonly include:
+              photographs,
+              defect identification,
+              fire stopping observations,
+              penetration schedules and compliance reporting.
             </p>
 
             <p>
-              Inspection findings may include:
+              BAKKER PFI LTD uses structured inspection workflows and Codexus digital systems
+              to support passive fire visibility throughout buildings.
             </p>
 
-            <ul className="space-y-4 pl-6 text-zinc-300 list-disc">
-
-              <li>Photographic records</li>
-
-              <li>Defect registers</li>
-
-              <li>Penetration schedules</li>
-
-              <li>Floor plan references</li>
-
-              <li>Compartmentation surveys</li>
-
-            </ul>
-
             <p>
-              BAKKER PFI Australia uses structured inspection workflows and Codexus digital compliance systems to help organise passive fire information throughout buildings across Sydney and NSW.
+              These workflows help support BWOF compliance,
+              remediation planning and ongoing passive fire management throughout Christchurch and Canterbury.
             </p>
 
           </div>
@@ -326,55 +293,43 @@ export default function ServicePenetrationsPage() {
 
       </section>
 
-      {/* INSPECTION GALLERY */}
-      <section className="border-b border-zinc-900 py-24">
+      {/* CODEXUS */}
+      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
 
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
-          <div className="overflow-hidden rounded-3xl border border-orange-500 bg-zinc-950">
+          <div>
 
-            <div className="grid items-center gap-12 lg:grid-cols-2">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Codexus Compliance Systems
+            </p>
 
-              {/* IMAGE */}
-              <div className="aspect-video overflow-hidden lg:aspect-auto lg:h-full">
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Digital Penetration & Compliance Management
+            </h2>
 
-                <img
-                  src="/learning/unsealed-penetration.png"
-                  alt="Passive Fire Inspection Gallery"
-                  className="h-full w-full object-cover"
-                />
+          </div>
 
-              </div>
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
-              {/* CONTENT */}
-              <div className="p-10 lg:p-16">
+            <p>
+              Codexus helps organise penetration records,
+              defect registers,
+              inspection data and passive fire reporting workflows.
+            </p>
 
-                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-                  Real Inspection Examples
-                </p>
+            <p>
+              The platform is powered by real-world installation and inspection knowledge provided by BAKKER PFI LTD.
+            </p>
 
-                <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-                  Explore Real Penetration Defects
-                </h2>
+            <div className="pt-4">
 
-                <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-                  View examples of unsealed penetrations,
-                  damaged fire stopping systems,
-                  missing collars and common fire stopping inspection findings identified throughout Sydney and NSW.
-                </p>
-
-                <div className="mt-10">
-
-                  <Link
-                    href="/learning/inspection-gallery"
-                    className="inline-flex rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
-                  >
-                    Open Inspection Gallery
-                  </Link>
-
-                </div>
-
-              </div>
+              <Link
+                href="/codexus"
+                className="inline-flex rounded-full border border-orange-500 px-8 py-4 font-semibold text-orange-500 transition hover:bg-orange-500 hover:text-black"
+              >
+                Explore Codexus
+              </Link>
 
             </div>
 
@@ -390,31 +345,24 @@ export default function ServicePenetrationsPage() {
         <div className="mx-auto max-w-5xl px-6 text-center">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney & NSW
+            Continue Learning
           </p>
 
           <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Passive Fire Penetration Inspections
+            Explore More Passive Fire Topics
           </h2>
 
-          <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
-            Contact Benjamin Bakker to discuss passive fire penetration inspections,
-            fire stopping defects,
-            compartmentation surveys and compliance workflows throughout Sydney and NSW.
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+            Continue learning about fire compartmentation,
+            fire doors,
+            inspections and passive fire compliance workflows.
           </p>
 
-          <div className="mt-14 flex flex-wrap justify-center gap-4">
-
-            <Link
-              href="/contact"
-              className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
-            >
-              Contact BAKKER PFI Australia
-            </Link>
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
 
             <Link
               href="/learning"
-              className="rounded-full border border-zinc-700 px-10 py-5 text-lg font-semibold transition hover:border-orange-500 hover:text-orange-500"
+              className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
             >
               Back To Learning Centre
             </Link>

@@ -21,18 +21,18 @@ export default function Navbar() {
 
           <img
             src="/logo.png"
-            alt="BAKKER PFI Australia"
+            alt="BAKKER PFI LTD"
             className="h-12 w-auto"
           />
 
           <div className="hidden md:block">
 
             <div className="text-lg font-bold tracking-wide text-white">
-              BAKKER PFI Australia
+              BAKKER PFI LTD
             </div>
 
             <div className="text-xs uppercase tracking-[0.25em] text-orange-500">
-              Passive Fire Compliance
+              Christchurch Passive Fire Compliance
             </div>
 
           </div>
@@ -61,6 +61,13 @@ export default function Navbar() {
             className="transition hover:text-orange-500"
           >
             Services
+          </Link>
+
+          <Link
+            href="/projects"
+            className="transition hover:text-orange-500"
+          >
+            Projects
           </Link>
 
           <Link
@@ -125,6 +132,14 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             >
               Services
+            </Link>
+
+            <Link
+              href="/projects"
+              className="border-b border-zinc-800 py-4"
+              onClick={() => setOpen(false)}
+            >
+              Projects
             </Link>
 
             <Link

@@ -2,41 +2,41 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Fire Door Inspections Sydney | BAKKER PFI Australia",
+  title: "Fire Door Inspections Christchurch | BAKKER PFI LTD",
   description:
-    "Learn about fire door inspections, excessive gaps, missing smoke seals and common fire door defects identified throughout buildings across Sydney and NSW.",
+    "Learn about fire door inspections, common fire door defects and passive fire compliance workflows throughout Christchurch and Canterbury.",
 };
 
 const defects = [
   {
     title: "Excessive Door Gaps",
     description:
-      "Large gaps around fire doors can allow smoke and fire to spread between compartments.",
+      "Large perimeter gaps can allow smoke and fire to spread between fire compartments.",
   },
   {
     title: "Missing Smoke Seals",
     description:
-      "Missing or damaged smoke seals reduce the performance of fire doors protecting escape routes.",
+      "Damaged or missing smoke seals reduce the effectiveness of fire doors protecting escape routes.",
   },
   {
     title: "Damaged Door Closers",
     description:
-      "Faulty or disconnected door closers may prevent fire doors from self-closing correctly.",
+      "Faulty or disconnected door closers can prevent fire doors from self-closing correctly.",
   },
   {
-    title: "Wedged Open Doors",
+    title: "Non-Compliant Modifications",
     description:
-      "Fire doors held open without approved hold-open systems compromise fire compartmentation.",
+      "Holes, unapproved hardware and field modifications can compromise fire door performance.",
   },
   {
-    title: "Damaged Frames & Hardware",
+    title: "Damaged Frames",
     description:
-      "Damaged hinges, frames and latching hardware can affect the operation of fire doors.",
+      "Damaged or altered frames may affect the fire resistance performance of the door assembly.",
   },
   {
-    title: "Unapproved Modifications",
+    title: "Threshold Gaps",
     description:
-      "Drilling, cutting or altering fire doors can compromise their tested fire performance.",
+      "Large gaps beneath fire doors can reduce smoke containment performance.",
   },
 ];
 
@@ -54,13 +54,13 @@ export default function FireDoorsPage() {
 
           <img
             src="/learning/fire-door-example.png"
-            alt="Fire Door Inspections Sydney"
+            alt="Fire Door Inspection Christchurch"
             className="h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/55" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
         </div>
 
@@ -68,18 +68,18 @@ export default function FireDoorsPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Fire Door Compliance Sydney
+            Christchurch Fire Door Compliance
           </p>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
             Fire Door Inspections
             <br />
-            & Common Defects
+            & Compliance
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            Understanding how fire doors protect escape routes,
-            maintain fire compartmentation and support building fire safety throughout Sydney and NSW.
+            Understanding fire door systems,
+            common defects and inspection workflows throughout Christchurch and Canterbury.
           </p>
 
         </div>
@@ -94,7 +94,7 @@ export default function FireDoorsPage() {
           <div>
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Why Fire Doors Matter
+              What Are Fire Doors?
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
@@ -106,17 +106,19 @@ export default function FireDoorsPage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Fire doors are designed to slow the spread of fire and smoke throughout buildings,
-              helping protect occupants and maintain safe evacuation pathways.
+              Fire doors form part of a building’s passive fire protection system and are designed to help slow the spread of fire and smoke.
             </p>
 
             <p>
-              Throughout Sydney and NSW,
-              fire doors form part of the building’s overall passive fire protection strategy and contribute to fire compartmentation performance.
+              These doors help protect escape routes,
+              stairwells,
+              corridors and fire compartments throughout buildings.
             </p>
 
             <p>
-              Damaged or non-compliant fire doors can compromise smoke containment and reduce the effectiveness of fire separation systems.
+              Throughout Christchurch and Canterbury,
+              fire doors are commonly inspected as part of BWOF reviews,
+              existing building inspections and passive fire remediation projects.
             </p>
 
           </div>
@@ -126,28 +128,28 @@ export default function FireDoorsPage() {
       </section>
 
       {/* COMMON DEFECTS */}
-      <section className="border-b border-zinc-900 py-24">
+      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
 
         <div className="mx-auto max-w-7xl px-6">
 
-          <div className="max-w-4xl">
+          <div className="mb-16">
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Common Fire Door Issues
+              Common Fire Door Defects
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Typical Defects Identified During Inspections
+              Typical Issues Identified During Inspections
             </h2>
 
           </div>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
             {defects.map((defect) => (
               <div
                 key={defect.title}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8"
+                className="rounded-3xl border border-zinc-800 bg-black p-8"
               >
 
                 <h3 className="text-2xl font-bold">
@@ -167,59 +169,7 @@ export default function FireDoorsPage() {
 
       </section>
 
-      {/* GAPS & SEALS */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          {/* IMAGE */}
-          <div className="overflow-hidden rounded-3xl border border-zinc-800">
-
-            <img
-              src="/learning/fire-door-example.png"
-              alt="Fire Door Defects"
-              className="h-full w-full object-cover"
-            />
-
-          </div>
-
-          {/* CONTENT */}
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Smoke Containment
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Why Door Gaps Matter
-            </h2>
-
-            <div className="mt-10 space-y-8 text-lg leading-8 text-zinc-400">
-
-              <p>
-                Excessive gaps around fire doors can allow smoke and hot gases to spread rapidly between compartments.
-              </p>
-
-              <p>
-                Missing smoke seals,
-                damaged thresholds and incorrectly adjusted doors may reduce smoke containment performance during a fire event.
-              </p>
-
-              <p>
-                During passive fire inspections,
-                fire door gaps,
-                smoke seals and door operation are commonly reviewed as part of broader building fire safety assessments.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* AFSS */}
+      {/* WHY DEFECTS MATTER */}
       <section className="border-b border-zinc-900 py-24">
 
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
@@ -227,11 +177,11 @@ export default function FireDoorsPage() {
           <div>
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              NSW Compliance
+              Why Fire Doors Matter
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Supporting Building Fire Safety Workflows
+              Maintaining Compartmentation Performance
             </h2>
 
           </div>
@@ -239,18 +189,17 @@ export default function FireDoorsPage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Fire door inspections may support building fire safety management processes associated with Annual Fire Safety Statements (AFSS)
-              and ongoing Essential Fire Safety Measures (EFSM) maintenance workflows.
+              Fire doors are designed to operate as part of the overall fire compartmentation system within a building.
             </p>
 
             <p>
-              Building owners,
-              strata managers and facility managers often require visibility of passive fire defects affecting fire compartmentation systems.
+              Defective fire doors can compromise smoke control,
+              evacuation pathways and the performance of fire-rated separations.
             </p>
 
             <p>
-              Inspection reporting may include photographs,
-              defect registers and recommendations supporting remediation planning and compliance management.
+              Excessive gaps,
+              damaged seals and faulty hardware are commonly identified during inspections throughout existing buildings.
             </p>
 
           </div>
@@ -259,55 +208,85 @@ export default function FireDoorsPage() {
 
       </section>
 
-      {/* INSPECTION GALLERY */}
+      {/* INSPECTIONS */}
+      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
+
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+
+          <div>
+
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Fire Door Inspections
+            </p>
+
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Inspection & Reporting Workflows
+            </h2>
+
+          </div>
+
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+
+            <p>
+              Fire door inspections commonly include review of door gaps,
+              smoke seals,
+              frames,
+              closers,
+              signage and general door condition.
+            </p>
+
+            <p>
+              Inspection findings may be documented using photographs,
+              defect registers and compliance reporting workflows.
+            </p>
+
+            <p>
+              BAKKER PFI LTD supports fire door inspections and passive fire compliance workflows throughout Christchurch and Canterbury.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CODEXUS */}
       <section className="border-b border-zinc-900 py-24">
 
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
-          <div className="overflow-hidden rounded-3xl border border-orange-500 bg-zinc-950">
+          <div>
 
-            <div className="grid items-center gap-12 lg:grid-cols-2">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Codexus Compliance Systems
+            </p>
 
-              {/* IMAGE */}
-              <div className="aspect-video overflow-hidden lg:aspect-auto lg:h-full">
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Digital Fire Door & Compliance Workflows
+            </h2>
 
-                <img
-                  src="/learning/fire-door-example.png"
-                  alt="Fire Door Inspection Gallery"
-                  className="h-full w-full object-cover"
-                />
+          </div>
 
-              </div>
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
-              {/* CONTENT */}
-              <div className="p-10 lg:p-16">
+            <p>
+              Codexus helps organise passive fire inspection records,
+              defect registers,
+              fire door observations and compliance workflows.
+            </p>
 
-                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-                  Real Inspection Examples
-                </p>
+            <p>
+              The platform is powered by real-world installation and inspection experience provided by BAKKER PFI LTD.
+            </p>
 
-                <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-                  Explore Real Fire Door Defects
-                </h2>
+            <div className="pt-4">
 
-                <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-                  View examples of excessive fire door gaps,
-                  damaged smoke seals,
-                  non-compliant modifications and common fire door inspection findings.
-                </p>
-
-                <div className="mt-10">
-
-                  <Link
-                    href="/learning/inspection-gallery"
-                    className="inline-flex rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
-                  >
-                    Open Inspection Gallery
-                  </Link>
-
-                </div>
-
-              </div>
+              <Link
+                href="/codexus"
+                className="inline-flex rounded-full border border-orange-500 px-8 py-4 font-semibold text-orange-500 transition hover:bg-orange-500 hover:text-black"
+              >
+                Explore Codexus
+              </Link>
 
             </div>
 
@@ -323,30 +302,24 @@ export default function FireDoorsPage() {
         <div className="mx-auto max-w-5xl px-6 text-center">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney & NSW
+            Continue Learning
           </p>
 
           <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Fire Door Inspection Support
+            Explore More Passive Fire Topics
           </h2>
 
-          <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
-            Contact Benjamin Bakker to discuss fire door inspections,
-            passive fire defect reporting and compartmentation reviews throughout Sydney and NSW.
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+            Continue learning about fire compartmentation,
+            service penetrations,
+            inspections and passive fire compliance workflows.
           </p>
 
-          <div className="mt-14 flex flex-wrap justify-center gap-4">
-
-            <Link
-              href="/contact"
-              className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
-            >
-              Contact BAKKER PFI Australia
-            </Link>
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
 
             <Link
               href="/learning"
-              className="rounded-full border border-zinc-700 px-10 py-5 text-lg font-semibold transition hover:border-orange-500 hover:text-orange-500"
+              className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
             >
               Back To Learning Centre
             </Link>

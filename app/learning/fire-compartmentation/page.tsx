@@ -2,53 +2,42 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Fire Compartmentation Sydney | BAKKER PFI Australia",
+  title: "Fire Compartmentation Christchurch | BAKKER PFI LTD",
   description:
-    "Learn how fire compartmentation systems work and why passive fire inspections are critical throughout buildings across Sydney and NSW.",
+    "Learn about fire compartmentation, fire separations and passive fire compliance throughout Christchurch and Canterbury.",
 };
 
-const compartmentElements = [
+const compartmentTypes = [
   {
     title: "Fire-Rated Walls",
     description:
-      "Walls designed to slow the spread of fire and smoke between compartments.",
+      "Fire-rated walls help divide buildings into separate fire compartments designed to slow the spread of fire and smoke.",
   },
   {
     title: "Fire-Rated Floors",
     description:
-      "Floors forming fire separations between levels within buildings.",
+      "Fire-rated floor systems help prevent vertical fire spread between levels within buildings.",
   },
   {
     title: "Fire Doors",
     description:
-      "Doors protecting escape routes and maintaining compartment boundaries.",
+      "Fire doors form part of the compartmentation system protecting escape routes and separated spaces.",
   },
   {
-    title: "Penetration Sealing",
+    title: "Service Penetrations",
     description:
-      "Fire stopping systems protecting openings created by building services.",
+      "Openings created by services passing through fire-rated barriers must be protected using tested systems.",
   },
   {
     title: "Ceiling Barriers",
     description:
-      "Ceiling systems helping maintain compartmentation within concealed spaces.",
+      "Ceiling spaces and concealed voids may require fire barriers to maintain compartmentation performance.",
   },
   {
-    title: "Service Risers",
+    title: "Risers & Shafts",
     description:
-      "Protected shafts and risers reducing vertical fire and smoke spread.",
+      "Vertical risers and service shafts require fire separation systems to reduce fire spread throughout buildings.",
   },
-];
-
-const commonFailures = [
-  "Unsealed service penetrations",
-  "Damaged fire-rated walls",
-  "Excessive fire door gaps",
-  "Missing smoke seals",
-  "Compromised ceiling barriers",
-  "Open risers and shafts",
-  "Untested fire stopping systems",
-  "Unapproved modifications",
 ];
 
 export default function FireCompartmentationPage() {
@@ -65,13 +54,13 @@ export default function FireCompartmentationPage() {
 
           <img
             src="/learning/fire-compartment-diagram.png"
-            alt="Fire Compartmentation Sydney"
+            alt="Fire Compartmentation Christchurch"
             className="h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/60" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
         </div>
 
@@ -79,17 +68,17 @@ export default function FireCompartmentationPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Fire Compartmentation Sydney
+            Christchurch Passive Fire Learning
           </p>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-            Understanding
-            <br />
             Fire Compartmentation
+            <br />
+            & Fire Separations
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            Learn how fire compartmentation systems help slow the spread of fire and smoke throughout buildings across Sydney and NSW.
+            Understanding how fire compartments and fire-rated separations help slow the spread of fire and smoke throughout buildings.
           </p>
 
         </div>
@@ -116,17 +105,19 @@ export default function FireCompartmentationPage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Fire compartmentation is the process of dividing a building into separate fire-resistant compartments designed to slow the spread of fire and smoke.
+              Fire compartmentation is a passive fire protection strategy designed to divide buildings into separate fire compartments.
             </p>
 
             <p>
-              These compartments help protect occupants,
-              maintain evacuation pathways and reduce fire spread throughout a building during a fire event.
+              These compartments help slow the spread of fire and smoke throughout a building,
+              protecting occupants,
+              escape routes and property.
             </p>
 
             <p>
-              Throughout Sydney and NSW,
-              fire compartmentation systems form part of the overall building fire safety strategy within both new and existing buildings.
+              Fire-rated walls,
+              floors,
+              doors and fire stopping systems all work together to maintain compartmentation performance.
             </p>
 
           </div>
@@ -135,29 +126,29 @@ export default function FireCompartmentationPage() {
 
       </section>
 
-      {/* COMPARTMENT ELEMENTS */}
-      <section className="border-b border-zinc-900 py-24">
+      {/* TYPES */}
+      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
 
         <div className="mx-auto max-w-7xl px-6">
 
-          <div className="max-w-4xl">
+          <div className="mb-16">
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
               Compartmentation Systems
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              What Creates A Fire Compartment?
+              Common Fire Separation Elements
             </h2>
 
           </div>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-            {compartmentElements.map((item) => (
+            {compartmentTypes.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8"
+                className="rounded-3xl border border-zinc-800 bg-black p-8"
               >
 
                 <h3 className="text-2xl font-bold">
@@ -178,105 +169,18 @@ export default function FireCompartmentationPage() {
       </section>
 
       {/* WHY IT MATTERS */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          {/* IMAGE */}
-          <div className="overflow-hidden rounded-3xl border border-zinc-800">
-
-            <img
-              src="/learning/fire-compartment-diagram.png"
-              alt="Fire Compartmentation Diagram"
-              className="h-full w-full object-cover"
-            />
-
-          </div>
-
-          {/* CONTENT */}
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Why It Matters
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Slowing Fire & Smoke Spread
-            </h2>
-
-            <div className="mt-10 space-y-8 text-lg leading-8 text-zinc-400">
-
-              <p>
-                Fire compartmentation systems are designed to slow the movement of fire,
-                smoke and hot gases between different areas of a building.
-              </p>
-
-              <p>
-                When compartmentation systems are compromised,
-                smoke and fire can spread more rapidly throughout escape routes,
-                ceiling voids,
-                risers and adjacent tenancy spaces.
-              </p>
-
-              <p>
-                Passive fire inspections help identify defects affecting compartmentation performance before they become major compliance or safety issues.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* COMMON FAILURES */}
       <section className="border-b border-zinc-900 py-24">
 
-        <div className="mx-auto max-w-7xl px-6">
-
-          <div className="max-w-4xl">
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Common Compartmentation Failures
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Typical Issues Identified During Inspections
-            </h2>
-
-          </div>
-
-          <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-
-            {commonFailures.map((failure) => (
-              <div
-                key={failure}
-                className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 text-lg font-semibold"
-              >
-                {failure}
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* EXISTING BUILDINGS */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
-
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
           <div>
 
             <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Existing Buildings
+              Why Compartmentation Matters
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Hidden Defects Often Develop Over Time
+              Slowing The Spread Of Fire & Smoke
             </h2>
 
           </div>
@@ -284,20 +188,101 @@ export default function FireCompartmentationPage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Compartmentation systems within existing buildings are often affected by renovations,
-              tenant fitouts,
-              service upgrades and later building modifications.
+              Compartmentation systems are designed to help contain fire and smoke within a limited area for a specified period of time.
             </p>
 
             <p>
-              Many defects remain hidden above ceilings,
-              within risers and concealed spaces until compartmentation surveys or passive fire inspections are carried out.
+              This helps improve evacuation conditions,
+              protects escape routes and supports firefighting operations.
             </p>
 
             <p>
-              Inspection workflows commonly include photographic documentation,
+              Compromised fire separations can allow fire and smoke to spread rapidly throughout buildings.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* COMMON ISSUES */}
+      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
+
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+
+          <div>
+
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Common Compartmentation Issues
+            </p>
+
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Defects Identified During Inspections
+            </h2>
+
+          </div>
+
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+
+            <p>
+              Common compartmentation defects include:
+              unsealed penetrations,
+              damaged fire-rated linings,
+              missing barriers,
+              defective fire doors and unprotected ceiling voids.
+            </p>
+
+            <p>
+              Tenant fitouts,
+              service upgrades and renovation works often create new openings within fire-rated barriers.
+            </p>
+
+            <p>
+              These issues are frequently identified during BWOF reviews,
+              remediation projects and existing building inspections throughout Christchurch and Canterbury.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* INSPECTIONS */}
+      <section className="border-b border-zinc-900 py-24">
+
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+
+          <div>
+
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Inspection & Reporting
+            </p>
+
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Structured Passive Fire Compliance Workflows
+            </h2>
+
+          </div>
+
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
+
+            <p>
+              Passive fire inspections commonly include review of fire separations,
+              service penetrations,
+              fire doors and compartmentation systems throughout buildings.
+            </p>
+
+            <p>
+              Inspection findings may be documented using photographs,
               defect registers,
-              penetration schedules and floor plan references helping provide visibility of building fire safety conditions.
+              floor plans and compliance reporting systems.
+            </p>
+
+            <p>
+              BAKKER PFI LTD uses structured inspection workflows and Codexus digital systems
+              to support passive fire visibility and compliance management throughout Christchurch and Canterbury.
             </p>
 
           </div>
@@ -307,7 +292,7 @@ export default function FireCompartmentationPage() {
       </section>
 
       {/* CODEXUS */}
-      <section className="border-b border-zinc-900 py-24">
+      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
 
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
@@ -318,7 +303,7 @@ export default function FireCompartmentationPage() {
             </p>
 
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Digital Compartmentation Workflows
+              Digital Fire Compartmentation Workflows
             </h2>
 
           </div>
@@ -326,13 +311,13 @@ export default function FireCompartmentationPage() {
           <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
             <p>
-              Codexus is a digital passive fire compliance platform designed to support compartmentation inspections,
-              penetration records,
-              defect registers and compliance reporting workflows.
+              Codexus helps organise passive fire inspection records,
+              compartmentation observations,
+              defect registers and compliance workflows.
             </p>
 
             <p>
-              The platform is powered by real-world passive fire inspection and installation knowledge provided by BAKKER PFI Australia.
+              The platform is powered by real-world installation and inspection knowledge provided by BAKKER PFI LTD.
             </p>
 
             <div className="pt-4">
@@ -358,31 +343,24 @@ export default function FireCompartmentationPage() {
         <div className="mx-auto max-w-5xl px-6 text-center">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney & NSW
+            Continue Learning
           </p>
 
           <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Fire Compartmentation Inspections
+            Explore More Passive Fire Topics
           </h2>
 
-          <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
-            Contact Benjamin Bakker to discuss compartmentation surveys,
-            passive fire inspections,
-            penetration reviews and compliance workflows throughout Sydney and NSW.
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+            Continue learning about fire doors,
+            service penetrations,
+            inspections and passive fire compliance workflows.
           </p>
 
-          <div className="mt-14 flex flex-wrap justify-center gap-4">
-
-            <Link
-              href="/contact"
-              className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
-            >
-              Contact BAKKER PFI Australia
-            </Link>
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
 
             <Link
               href="/learning"
-              className="rounded-full border border-zinc-700 px-10 py-5 text-lg font-semibold transition hover:border-orange-500 hover:text-orange-500"
+              className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
             >
               Back To Learning Centre
             </Link>

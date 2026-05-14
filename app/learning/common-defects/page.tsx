@@ -2,9 +2,9 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Common Passive Fire Defects Sydney | BAKKER PFI Australia",
+  title: "Common Passive Fire Defects Christchurch | BAKKER PFI LTD",
   description:
-    "Learn about common passive fire defects identified during inspections throughout Sydney and NSW including fire door defects, unsealed penetrations and compromised fire compartmentation.",
+    "Learn about common passive fire defects identified during inspections throughout Christchurch and Canterbury including fire door defects, unsealed penetrations and compromised fire compartmentation.",
 };
 
 const defects = [
@@ -64,9 +64,9 @@ export default function CommonDefectsPage() {
             className="h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/60" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
 
         </div>
 
@@ -74,7 +74,7 @@ export default function CommonDefectsPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney Passive Fire Defects
+            Christchurch Passive Fire Defects
           </p>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
@@ -84,7 +84,7 @@ export default function CommonDefectsPage() {
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
-            Understanding the most common passive fire issues identified throughout buildings across Sydney and NSW.
+            Understanding the most common passive fire defects identified throughout buildings across Christchurch and Canterbury.
           </p>
 
         </div>
@@ -122,9 +122,10 @@ export default function CommonDefectsPage() {
             </p>
 
             <p>
-              Across Sydney and NSW,
-              passive fire defects are commonly identified during building inspections,
-              remediation projects and compliance reviews associated with Annual Fire Safety Statement (AFSS) processes.
+              Across Christchurch and Canterbury,
+              passive fire defects are commonly identified during BWOF reviews,
+              remediation projects,
+              tenancy fitouts and existing building inspections.
             </p>
 
           </div>
@@ -221,7 +222,8 @@ export default function CommonDefectsPage() {
             </p>
 
             <p>
-              Maintaining passive fire systems is an important part of building fire safety management and ongoing compliance workflows throughout NSW.
+              Maintaining passive fire systems is an important part of building fire safety management,
+              BWOF compliance workflows and ongoing building maintenance throughout New Zealand.
             </p>
 
           </div>
@@ -230,57 +232,41 @@ export default function CommonDefectsPage() {
 
       </section>
 
-      {/* INSPECTION GALLERY */}
+      {/* INSPECTIONS */}
       <section className="border-b border-zinc-900 py-24">
 
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
 
-          <div className="overflow-hidden rounded-3xl border border-orange-500 bg-zinc-950">
+          <div>
 
-            <div className="grid items-center gap-12 lg:grid-cols-2">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Inspections & Reporting
+            </p>
 
-              {/* IMAGE */}
-              <div className="aspect-video overflow-hidden lg:aspect-auto lg:h-full">
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Identifying & Documenting Defects
+            </h2>
 
-                <img
-                  src="/learning/unsealed-penetration.png"
-                  alt="Passive Fire Inspection Gallery"
-                  className="h-full w-full object-cover"
-                />
+          </div>
 
-              </div>
+          <div className="space-y-8 text-lg leading-8 text-zinc-400">
 
-              {/* CONTENT */}
-              <div className="p-10 lg:p-16">
+            <p>
+              Passive fire inspections help identify defects,
+              document issues and support structured compliance workflows.
+            </p>
 
-                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-                  Inspection Gallery
-                </p>
+            <p>
+              Inspection findings are commonly recorded using photographs,
+              penetration schedules,
+              floor plans,
+              defect registers and compliance reporting systems.
+            </p>
 
-                <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-                  Explore Real Inspection Examples
-                </h2>
-
-                <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-                  View examples of fire stopping defects,
-                  fire door issues,
-                  compartmentation breaches and passive fire inspection findings identified throughout buildings across Sydney and NSW.
-                </p>
-
-                <div className="mt-10">
-
-                  <Link
-                    href="/learning/inspection-gallery"
-                    className="inline-flex rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
-                  >
-                    Open Inspection Gallery
-                  </Link>
-
-                </div>
-
-              </div>
-
-            </div>
+            <p>
+              BAKKER PFI LTD uses structured inspection workflows and Codexus digital compliance systems
+              to support passive fire visibility throughout buildings across Christchurch and Canterbury.
+            </p>
 
           </div>
 
@@ -294,31 +280,25 @@ export default function CommonDefectsPage() {
         <div className="mx-auto max-w-5xl px-6 text-center">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney & NSW
+            Continue Learning
           </p>
 
           <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Passive Fire Inspection Support
+            Explore More Passive Fire Topics
           </h2>
 
-          <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
-            Contact Benjamin Bakker to discuss passive fire inspections,
-            defect reporting,
-            fire compartmentation reviews and compliance workflows throughout Sydney and NSW.
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+            Continue learning about fire compartmentation,
+            service penetrations,
+            inspections,
+            fire doors and passive fire compliance workflows.
           </p>
 
-          <div className="mt-14 flex flex-wrap justify-center gap-4">
-
-            <Link
-              href="/contact"
-              className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
-            >
-              Contact BAKKER PFI Australia
-            </Link>
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
 
             <Link
               href="/learning"
-              className="rounded-full border border-zinc-700 px-10 py-5 text-lg font-semibold transition hover:border-orange-500 hover:text-orange-500"
+              className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
             >
               Back To Learning Centre
             </Link>

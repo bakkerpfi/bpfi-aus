@@ -11,17 +11,19 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Contact BAKKER PFI Australia
+            Contact BAKKER PFI LTD
           </p>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-            Sydney Passive Fire Compliance Support
+            Christchurch Passive Fire Compliance Support
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
             Contact Benjamin Bakker for passive fire inspections,
             compartmentation surveys,
-            compliance reporting and AFSS support across Sydney and NSW.
+            BWOF remedial support,
+            fire door assessments and compliance reporting
+            across Christchurch and Canterbury.
           </p>
 
         </div>
@@ -45,7 +47,7 @@ export default function ContactPage() {
               </h2>
 
               <p className="mt-3 text-xl text-orange-500">
-                Technical Director
+                Managing Director
               </p>
 
               <div className="mt-12 space-y-8 text-lg text-zinc-300">
@@ -56,23 +58,10 @@ export default function ContactPage() {
                   </p>
 
                   <a
-                    href="tel:+61415568983"
+                    href="tel:+64226795244"
                     className="mt-2 block text-2xl font-bold hover:text-orange-500"
                   >
-                    +61 415 568 983
-                  </a>
-                </div>
-
-                <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                    Office
-                  </p>
-
-                  <a
-                    href="tel:+61290679765"
-                    className="mt-2 block text-2xl font-bold hover:text-orange-500"
-                  >
-                    +61 2 9067 9765
+                    +64 22 679 5244
                   </a>
                 </div>
 
@@ -89,6 +78,21 @@ export default function ContactPage() {
                   </a>
                 </div>
 
+                <div>
+                  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                    LinkedIn
+                  </p>
+
+                  <a
+                    href="https://www.linkedin.com/in/benjamin1975/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 block text-2xl font-bold hover:text-orange-500"
+                  >
+                    linkedin.com/in/benjamin1975
+                  </a>
+                </div>
+
               </div>
 
             </div>
@@ -97,11 +101,11 @@ export default function ContactPage() {
             <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-10">
 
               <p className="text-sm uppercase tracking-[0.3em] text-orange-500">
-                Services
+                Christchurch Compliance Support
               </p>
 
               <h2 className="mt-6 text-4xl font-bold">
-                Sydney Compliance Support
+                Passive Fire Inspection Services
               </h2>
 
               <div className="mt-10 space-y-6 text-lg leading-8 text-zinc-400">
@@ -115,7 +119,7 @@ export default function ContactPage() {
                 </p>
 
                 <p>
-                  AFSS passive fire support documentation.
+                  BWOF remedial support and passive fire reporting workflows.
                 </p>
 
                 <p>
@@ -128,6 +132,10 @@ export default function ContactPage() {
 
                 <p>
                   Codexus digital compliance workflow support.
+                </p>
+
+                <p>
+                  Supported by BAKKER PFI LTD Auckland operations team and real-world installation knowledge.
                 </p>
 
               </div>

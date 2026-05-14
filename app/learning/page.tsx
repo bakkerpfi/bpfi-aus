@@ -59,8 +59,8 @@ export default function LearningPage() {
         <div className="absolute inset-0">
 
           <img
-            src="/sydney.png"
-            alt="Sydney Australia Skyline"
+            src="/christchurch.png"
+            alt="Christchurch New Zealand"
             className="h-full w-full object-cover"
           />
 
@@ -74,7 +74,7 @@ export default function LearningPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Sydney Passive Fire Learning Centre
+            Christchurch Passive Fire Learning Centre
           </p>
 
           <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
@@ -87,7 +87,7 @@ export default function LearningPage() {
             Learn about passive fire systems,
             fire compartmentation,
             penetration sealing,
-            fire doors and passive fire compliance throughout buildings across Sydney and NSW.
+            fire doors and passive fire compliance throughout buildings across Christchurch and Canterbury.
           </p>
 
         </div>
@@ -119,7 +119,7 @@ export default function LearningPage() {
             </p>
 
             <p>
-              Across Sydney and NSW,
+              Throughout Christchurch and Canterbury,
               passive fire systems form part of the overall building fire safety strategy and are critical to maintaining fire compartmentation performance.
             </p>
 
@@ -146,7 +146,7 @@ export default function LearningPage() {
             </p>
 
             <h2 className="text-4xl font-bold md:text-6xl">
-              Sydney Passive Fire Learning Topics
+              Christchurch Passive Fire Learning Topics
             </h2>
 
           </div>
@@ -160,7 +160,6 @@ export default function LearningPage() {
                 className="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 transition hover:border-orange-500 hover:bg-zinc-900"
               >
 
-                {/* IMAGE */}
                 <div className="aspect-video overflow-hidden">
 
                   <img
@@ -171,7 +170,6 @@ export default function LearningPage() {
 
                 </div>
 
-                {/* CONTENT */}
                 <div className="p-8">
 
                   <h3 className="mb-5 text-2xl font-bold transition group-hover:text-orange-500">
@@ -234,209 +232,35 @@ export default function LearningPage() {
         </div>
       </section>
 
-      {/* LEARNING GUIDE */}
-      <section className="border-b border-zinc-900 py-24">
-
+      {/* QUIZ */}
+      <section className="py-24">
         <div className="mx-auto max-w-5xl px-6 text-center">
 
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Interactive Learning
+            Passive Fire Awareness Quiz
           </p>
 
           <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Passive Fire Basic Understanding Guide
+            Test Your Passive Fire Knowledge
           </h2>
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
-            BAKKER PFI Australia is developing interactive passive fire learning resources
-            designed to help building owners,
-            facility managers,
-            contractors and strata managers
-            better understand passive fire systems and compliance responsibilities throughout NSW.
+            Complete the Christchurch Passive Fire Awareness Quiz and generate your BAKKER PFI LTD learning certificate.
           </p>
 
           <div className="mt-12">
 
-            <button className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400">
-              Learning Guide Coming Soon
-            </button>
+            <Link
+              href="/learning/quiz/start"
+              className="inline-flex rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
+            >
+              Start Quiz
+            </Link>
 
           </div>
 
         </div>
       </section>
-
-      {/* CERTIFICATE */}
-      <section className="border-b border-zinc-900 py-24">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Certification
-          </p>
-
-          <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Passive Fire Awareness Certificate
-          </h2>
-
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
-            Future learning modules will include a basic understanding quiz
-            allowing participants to receive a BAKKER PFI Passive Fire Awareness Certificate.
-          </p>
-
-        </div>
-      </section>
-
-      {/* INSPECTION GALLERY CTA */}
-      <section className="border-b border-zinc-900 py-24">
-        <div className="mx-auto max-w-7xl px-6">
-
-          <div className="overflow-hidden rounded-3xl border border-orange-500 bg-zinc-950">
-
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-
-              {/* IMAGE */}
-              <div className="aspect-video overflow-hidden lg:aspect-auto lg:h-full">
-
-                <img
-                  src="/learning/unsealed-penetration.png"
-                  alt="Passive Fire Inspection Gallery"
-                  className="h-full w-full object-cover"
-                />
-
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-10 lg:p-16">
-
-                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-                  Real Building Inspections
-                </p>
-
-                <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-                  Explore Real Passive Fire Inspection Examples
-                </h2>
-
-                <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-                  Explore real passive fire inspection examples including fire door defects,
-                  service penetrations,
-                  fire stopping failures,
-                  smoke sealing issues and compartmentation breaches identified throughout buildings across Sydney and NSW.
-                </p>
-
-                <div className="mt-10">
-
-                  <Link
-                    href="/learning/inspection-gallery"
-                    className="inline-flex rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
-                  >
-                    Open Inspection Gallery
-                  </Link>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* PASSIVE FIRE QUIZ */}
-      <section className="border-b border-zinc-900 py-24">
-        <div className="mx-auto max-w-7xl px-6">
-
-          <div className="overflow-hidden rounded-3xl border border-orange-500 bg-zinc-950">
-
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-
-              {/* IMAGE */}
-              <div className="aspect-video overflow-hidden lg:aspect-auto lg:h-full">
-
-                <img
-                  src="/learning/fire-compartment-diagram.png"
-                  alt="Passive Fire Awareness Quiz"
-                  className="h-full w-full object-cover"
-                />
-
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-10 lg:p-16">
-
-                <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-                  Interactive Learning
-                </p>
-
-                <h2 className="text-4xl font-bold leading-tight md:text-5xl">
-                  Test Your Passive Fire Knowledge
-                </h2>
-
-                <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-                  Complete the BAKKER PFI Passive Fire Awareness Quiz
-                  and receive your personalised Passive Fire Awareness Certificate.
-                </p>
-
-                <div className="mt-10 flex flex-wrap gap-4">
-
-                  <Link
-                    href="/learning/quiz"
-                    className="inline-flex rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
-                  >
-                    Start Quiz
-                  </Link>
-
-                  <Link
-                    href="/learning"
-                    className="inline-flex rounded-full border border-zinc-700 px-8 py-4 font-semibold transition hover:border-orange-500"
-                  >
-                    Open Learning Centre
-                  </Link>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="py-10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 md:flex-row md:items-center md:justify-between">
-
-          <div className="flex items-center gap-4">
-
-            <img
-              src="/logo.png"
-              alt="BAKKER PFI"
-              className="h-14 w-auto"
-            />
-
-            <div>
-
-              <p className="text-xl font-bold text-orange-500">
-                BAKKER PFI Australia
-              </p>
-
-              <p className="mt-1 text-sm text-zinc-500">
-                Passive Fire Inspection & Compliance Reporting
-              </p>
-
-            </div>
-
-          </div>
-
-          <p className="text-sm text-zinc-600">
-            © 2026 BAKKER PFI Australia. All rights reserved.
-          </p>
-
-        </div>
-      </footer>
 
     </main>
   );
