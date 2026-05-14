@@ -11,17 +11,17 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-zinc-900">
 
-        {/* BACKGROUND IMAGE */}
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{
-            backgroundImage:
-              "url('/sydney.png')",
-          }}
-        />
+{/* BACKGROUND IMAGE */}
+<div
+  className="absolute inset-0 bg-cover bg-center opacity-90"
+  style={{
+    backgroundImage:
+      "url('/sydney.png')",
+  }}
+/>
 
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-black/60" />
+{/* OVERLAY */}
+<div className="absolute inset-0 bg-black/15" />
 
         {/* CONTENT */}
         <div className="relative mx-auto max-w-7xl px-6 py-32 md:py-44">

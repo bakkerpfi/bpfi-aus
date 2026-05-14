@@ -241,8 +241,8 @@ export default function QuizPage() {
 
           <div className="mt-14">
 
-            <Link
-              href="/learning/quiz/start"
+<Link
+  href="/learning/quiz/start"
               className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
             >
               Start Quiz

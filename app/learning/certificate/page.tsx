@@ -55,12 +55,12 @@ function CertificateContent() {
   };
 
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center px-6 py-24">
+    <section className="flex flex-col items-center justify-center px-4 py-10">
 
       <div
         ref={certificateRef}
         id="certificate"
-        className="w-full max-w-5xl rounded-[40px] border border-orange-500 bg-zinc-950 p-12 shadow-2xl"
+        className="mx-auto flex h-[1080px] w-[760px] flex-col justify-between overflow-hidden rounded-[20px] border border-orange-500 bg-zinc-950 p-10 shadow-2xl"
       >
 
         {/* HEADER */}
@@ -95,7 +95,7 @@ function CertificateContent() {
 
           <p className="mx-auto mt-12 max-w-3xl text-xl leading-10 text-zinc-400">
             For successfully completing the
-            BAKKER PFI Pte Ltd Passive Fire Learning Quiz
+            BAKKER PFI Ltd Passive Fire Learning Quiz
             and demonstrating a basic understanding of passive fire protection systems,
             fire compartmentation and compliance principles.
           </p>
@@ -112,7 +112,7 @@ function CertificateContent() {
             </p>
 
             <p className="mt-4 text-2xl font-bold">
-              BAKKER PFI Pte Ltd
+              BAKKER PFI Ltd
             </p>
 
             <p className="mt-2 text-zinc-500">
@@ -127,13 +127,13 @@ function CertificateContent() {
               Learning Centre
             </p>
 
-            <p className="mt-4 text-2xl font-bold">
-              Singapore
-            </p>
+<p className="mt-4 text-2xl font-bold">
+  Sydney, Australia
+</p>
 
-            <p className="mt-2 text-zinc-500">
-              www.bakkerpfi.sg
-            </p>
+<p className="mt-2 text-zinc-500">
+  www.bakkerpfi.com
+</p>
 
           </div>
 
