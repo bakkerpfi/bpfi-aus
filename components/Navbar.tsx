@@ -1,142 +1,162 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-4">
-          <Image
-            src="/bakker-logo.png"
-            alt="BAKKER PFI LTD"
-            width={170}
-            height={50}
-            className="object-contain w-auto h-auto"
+    <header className="sticky top-0 z-50 border-b border-zinc-800 bg-black/90 backdrop-blur">
+
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+
+        {/* LOGO */}
+        <Link
+          href="/"
+          className="flex items-center gap-4"
+        >
+
+          <img
+            src="/logo.png"
+            alt="BAKKER PFI Australia"
+            className="h-12 w-auto"
           />
 
-          <div className="hidden sm:block">
-            <h1 className="text-xl font-bold tracking-tight">
-              BAKKER PFI LTD
-            </h1>
+          <div className="hidden md:block">
 
-            <p className="text-gray-500 text-sm">
-              Bakker Passive Fire Inspections
-            </p>
-          </div>
-        </a>
-
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="/" className="hover:text-[#ff6e00] transition-colors">
-            Home
-          </a>
-
-          <a href="/services" className="hover:text-[#ff6e00] transition-colors">
-            Services
-          </a>
-
-          <div className="relative group">
-            <button className="hover:text-[#ff6e00] transition-colors flex items-center gap-2">
-              About
-              <span>⌄</span>
-            </button>
-
-            <div className="absolute left-0 mt-4 w-64 bg-white border border-gray-200 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden">
-              <a href="/about" className="block px-6 py-4 hover:bg-gray-50">
-                About BAKKER PFI
-              </a>
-
-              <a
-                href="/about-ben-bakker"
-                className="block px-6 py-4 hover:bg-gray-50"
-              >
-                About Ben Bakker
-              </a>
+            <div className="text-lg font-bold tracking-wide text-white">
+              BAKKER PFI Australia
             </div>
+
+            <div className="text-xs uppercase tracking-[0.25em] text-orange-500">
+              Passive Fire Compliance
+            </div>
+
           </div>
 
-          <a href="/contact" className="hover:text-[#ff6e00] transition-colors">
+        </Link>
+
+        {/* DESKTOP MENU */}
+        <nav className="hidden items-center gap-8 text-sm uppercase tracking-wide md:flex">
+
+          <Link
+            href="/"
+            className="transition hover:text-orange-500"
+          >
+            Home
+          </Link>
+
+          <Link
+            href="/about"
+            className="transition hover:text-orange-500"
+          >
+            About
+          </Link>
+
+          <Link
+            href="/services"
+            className="transition hover:text-orange-500"
+          >
+            Services
+          </Link>
+
+          <Link
+            href="/learning"
+            className="transition hover:text-orange-500"
+          >
+            Learning
+          </Link>
+
+          <Link
+            href="/codexus"
+            className="transition hover:text-orange-500"
+          >
+            Codexus
+          </Link>
+
+          <Link
+            href="/contact"
+            className="rounded-full border border-orange-500 px-5 py-2 text-orange-500 transition hover:bg-orange-500 hover:text-black"
+          >
             Contact
-          </a>
+          </Link>
+
         </nav>
 
-        <a
-          href="/contact"
-          className="hidden md:inline-flex bg-[#ff6e00] hover:bg-[#e66300] transition-colors text-white px-5 py-3 rounded-xl text-sm font-semibold"
-        >
-          Request Inspection
-        </a>
-
+        {/* MOBILE BUTTON */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden border border-gray-300 rounded-xl px-4 py-3 text-sm font-semibold"
+          onClick={() => setOpen(!open)}
+          className="text-white md:hidden"
         >
-          {menuOpen ? "Close" : "Menu"}
+          {open ? <X size={30} /> : <Menu size={30} />}
         </button>
+
       </div>
 
-      {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-6 py-6 space-y-4 text-base font-medium">
-            <a
+      {/* MOBILE MENU */}
+      {open && (
+
+        <div className="border-t border-zinc-800 bg-black md:hidden">
+
+          <nav className="flex flex-col px-6 py-6 text-sm uppercase tracking-wide">
+
+            <Link
               href="/"
-              className="block py-3 border-b border-gray-100"
-              onClick={() => setMenuOpen(false)}
+              className="border-b border-zinc-800 py-4"
+              onClick={() => setOpen(false)}
             >
               Home
-            </a>
+            </Link>
 
-            <a
+            <Link
+              href="/about"
+              className="border-b border-zinc-800 py-4"
+              onClick={() => setOpen(false)}
+            >
+              About
+            </Link>
+
+            <Link
               href="/services"
-              className="block py-3 border-b border-gray-100"
-              onClick={() => setMenuOpen(false)}
+              className="border-b border-zinc-800 py-4"
+              onClick={() => setOpen(false)}
             >
               Services
-            </a>
+            </Link>
 
-            <div className="pt-2">
-              <p className="text-gray-400 text-sm uppercase tracking-wide mb-2">
-                About
-              </p>
+            <Link
+              href="/learning"
+              className="border-b border-zinc-800 py-4"
+              onClick={() => setOpen(false)}
+            >
+              Learning
+            </Link>
 
-              <a
-                href="/about"
-                className="block py-3 border-b border-gray-100"
-                onClick={() => setMenuOpen(false)}
-              >
-                About BAKKER PFI
-              </a>
+            <Link
+              href="/codexus"
+              className="border-b border-zinc-800 py-4"
+              onClick={() => setOpen(false)}
+            >
+              Codexus
+            </Link>
 
-              <a
-                href="/about-ben-bakker"
-                className="block py-3 border-b border-gray-100"
-                onClick={() => setMenuOpen(false)}
-              >
-                About Ben Bakker
-              </a>
-            </div>
-
-            <a
+            <Link
               href="/contact"
-              className="block py-3 border-b border-gray-100"
-              onClick={() => setMenuOpen(false)}
+              className="py-4 text-orange-500"
+              onClick={() => setOpen(false)}
             >
               Contact
-            </a>
+            </Link>
 
-            <a
-              href="/contact"
-              className="block text-center bg-[#ff6e00] text-white px-5 py-4 rounded-xl font-semibold"
-              onClick={() => setMenuOpen(false)}
-            >
-              Request Inspection
-            </a>
-          </div>
+          </nav>
+
         </div>
+
       )}
+
     </header>
   );
 }
