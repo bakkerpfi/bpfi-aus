@@ -5,82 +5,53 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-800 bg-black/90 backdrop-blur">
-
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-
         {/* LOGO */}
-        <Link
-          href="/"
-          className="flex items-center gap-4"
-        >
-
+        <Link href="/" className="flex items-center gap-4">
           <img
             src="/logo.png"
-            alt="BAKKER PFI LTD"
+            alt="BAKKER PFI Australia"
             className="h-12 w-auto"
           />
 
           <div className="hidden md:block">
-
             <div className="text-lg font-bold tracking-wide text-white">
-              BAKKER PFI LTD
+              BAKKER PFI Australia
             </div>
 
             <div className="text-xs uppercase tracking-[0.25em] text-orange-500">
-              Christchurch Passive Fire Compliance
+              Sydney Passive Fire Compliance
             </div>
-
           </div>
-
         </Link>
 
         {/* DESKTOP MENU */}
-        <nav className="hidden items-center gap-8 text-sm uppercase tracking-wide md:flex">
-
-          <Link
-            href="/"
-            className="transition hover:text-orange-500"
-          >
+        <nav className="hidden items-center gap-8 text-sm uppercase tracking-wide text-white md:flex">
+          <Link href="/" className="transition hover:text-orange-500">
             Home
           </Link>
 
-          <Link
-            href="/about"
-            className="transition hover:text-orange-500"
-          >
+          <Link href="/about" className="transition hover:text-orange-500">
             About
           </Link>
 
-          <Link
-            href="/services"
-            className="transition hover:text-orange-500"
-          >
+          <Link href="/services" className="transition hover:text-orange-500">
             Services
           </Link>
 
-          <Link
-            href="/projects"
-            className="transition hover:text-orange-500"
-          >
-            Projects
+          <Link href="/locations" className="transition hover:text-orange-500">
+            Locations
           </Link>
 
-          <Link
-            href="/learning"
-            className="transition hover:text-orange-500"
-          >
+          <Link href="/learning" className="transition hover:text-orange-500">
             Learning
           </Link>
 
-          <Link
-            href="/codexus"
-            className="transition hover:text-orange-500"
-          >
+          <Link href="/codexus" className="transition hover:text-orange-500">
             Codexus
           </Link>
 
@@ -90,7 +61,6 @@ export default function Navbar() {
           >
             Contact
           </Link>
-
         </nav>
 
         {/* MOBILE BUTTON */}
@@ -100,16 +70,12 @@ export default function Navbar() {
         >
           {open ? <X size={30} /> : <Menu size={30} />}
         </button>
-
       </div>
 
       {/* MOBILE MENU */}
       {open && (
-
         <div className="border-t border-zinc-800 bg-black md:hidden">
-
-          <nav className="flex flex-col px-6 py-6 text-sm uppercase tracking-wide">
-
+          <nav className="flex flex-col px-6 py-6 text-sm uppercase tracking-wide text-white">
             <Link
               href="/"
               className="border-b border-zinc-800 py-4"
@@ -135,11 +101,11 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/projects"
+              href="/locations"
               className="border-b border-zinc-800 py-4"
               onClick={() => setOpen(false)}
             >
-              Projects
+              Locations
             </Link>
 
             <Link
@@ -165,13 +131,9 @@ export default function Navbar() {
             >
               Contact
             </Link>
-
           </nav>
-
         </div>
-
       )}
-
     </header>
   );
 }
