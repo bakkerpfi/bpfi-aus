@@ -1,203 +1,345 @@
-import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 export default function AboutBenBakkerPage() {
   return (
-    <main className="min-h-screen bg-[#f5f5f5] text-black">
+    <>
       <Navbar />
 
-      {/* HERO */}
-      <section className="bg-[#111111] text-white py-32">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div className="inline-block bg-[#ff6e00]/20 text-[#ff9b4a] px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              About Ben Bakker
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-              Existing Building
-              <span className="text-[#ff6e00]">
-                {" "}
-                Passive Fire Specialist
-              </span>
-            </h1>
-
-            <p className="mt-8 text-xl text-gray-300 leading-relaxed">
-              Ben Bakker is the Managing Director of BAKKER PFI LTD and
-              specialises in passive fire inspections, compliance reporting and
-              existing building passive fire systems.
-            </p>
-
-<div className="mt-10">
-  <div className="flex flex-wrap gap-4">
-    <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
-      <p className="text-sm text-gray-400">Managing Director</p>
-      <p className="font-semibold mt-1">BAKKER PFI LTD</p>
-    </div>
-
-    <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
-      <p className="text-sm text-gray-400">Industry Focus</p>
-      <p className="font-semibold mt-1">Existing Buildings</p>
-    </div>
-
-    <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
-      <p className="text-sm text-gray-400">Specialisation</p>
-      <p className="font-semibold mt-1">Compliance Reporting</p>
-    </div>
-  </div>
-
-  <div className="mt-6">
-<a
-  href="https://www.linkedin.com/in/benjamin1975/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center bg-[#ff6e00] hover:bg-[#e66300] transition-colors text-white rounded-2xl px-6 py-4 font-semibold"
->
-  View Ben Bakker on LinkedIn →
-</a>
-  </div>
-
-              <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
-                <p className="text-sm text-gray-400">Industry Focus</p>
-                <p className="font-semibold mt-1">Existing Buildings</p>
-              </div>
-
-              <div className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
-                <p className="text-sm text-gray-400">Specialisation</p>
-                <p className="font-semibold mt-1">Compliance Reporting</p>
-              </div>
-            </div>
-          </div>
-
-          {/* IMAGE */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-[#ff6e00]/20 blur-3xl rounded-full" />
-
-            <div className="relative bg-white/5 border border-white/10 rounded-[32px] overflow-hidden backdrop-blur-sm">
-              <Image
+      <main className="min-h-screen bg-black text-white">
+        {/* HERO */}
+        <section className="border-b border-zinc-900 px-6 py-24">
+          <div className="mx-auto grid max-w-7xl gap-16 md:grid-cols-2 md:items-center">
+            {/* IMAGE */}
+            <div className="overflow-hidden rounded-[32px] border border-zinc-800">
+              <img
                 src="/ben-bakker.png"
-                alt="Ben Bakker"
-                width={700}
-                height={900}
-                className="w-full h-auto object-cover"
+                alt="Benjamin Bakker"
+                className="h-full w-full object-cover"
               />
             </div>
-          </div>
+
+{/* CONTENT */}
+<div>
+  <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+    About Ben Bakker
+  </p>
+
+  <h1 className="text-5xl font-bold leading-tight md:text-6xl">
+    Benjamin Bakker
+  </h1>
+
+  <p className="mt-8 text-xl leading-9 text-zinc-300">
+    Passive Fire Compliance Specialist focused on inspections,
+    compartmentation reviews, fire stopping systems,
+    compliance reporting and remediation pathway support
+    across New Zealand and Australia.
+  </p>
+
+  <div className="mt-8 space-y-6 text-lg leading-8 text-zinc-400">
+    <p>
+      Ben’s background combines practical passive fire installation
+      experience with technical compliance reporting and inspection
+      workflows for existing commercial buildings and construction
+      projects.
+    </p>
+
+    <p>
+      His work focuses heavily on passive fire inspections,
+      fire-rated compartmentation systems, defect identification,
+      AS1530.4 system understanding and pathway-to-compliance
+      reporting for building owners, consultants,
+      AFSS providers and contractors.
+    </p>
+
+    <p>
+      Ben is also involved in passive fire industry development,
+      competency discussions and digital compliance systems
+      through Codexus compliance platforms and international
+      industry engagement.
+    </p>
+  </div>
+
+  {/* QUICK INFO */}
+  <div className="mt-10 flex flex-wrap gap-4">
+    <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+      <p className="text-sm text-gray-400">
+        Position
+      </p>
+
+      <p className="mt-1 font-semibold">
+        Managing Director
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+      <p className="text-sm text-gray-400">
+        Industry Focus
+      </p>
+
+      <p className="mt-1 font-semibold">
+        Passive Fire Compliance
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+      <p className="text-sm text-gray-400">
+        Specialisation
+      </p>
+
+      <p className="mt-1 font-semibold">
+        Inspections & Reporting
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
+      <p className="text-sm text-gray-400">
+        Technical Focus
+      </p>
+
+      <p className="mt-1 font-semibold">
+        AS1530.4 Systems
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+        </section>
+
+{/* TECHNICAL SYSTEM KNOWLEDGE */}
+<section className="border-b border-zinc-900 py-24">
+  <div className="mx-auto max-w-7xl px-6">
+    <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+      Technical System Knowledge
+    </p>
+
+    <h2 className="max-w-5xl text-4xl font-bold md:text-5xl">
+      Understanding Passive Fire Systems Beyond Basic Inspection
+    </h2>
+
+    <div className="mt-12 grid gap-12 lg:grid-cols-2">
+      <div className="space-y-8 text-lg leading-9 text-zinc-400">
+        <p>
+          Benjamin Bakker’s background includes practical installation
+          experience and technical understanding of passive fire systems
+          tested to AS1530.4 and related passive fire standards used
+          throughout Australia and New Zealand.
+        </p>
+
+        <p>
+          This includes knowledge of fire-rated wall and floor systems,
+          penetration sealing systems, service movement requirements,
+          substrate conditions and tested passive fire system limitations.
+        </p>
+
+        <p>
+          Understanding how passive fire systems are actually installed
+          and perform within real buildings assists with identifying
+          defects, non-compliant conditions and inappropriate repairs
+          during inspections and compliance reviews.
+        </p>
+
+        <p>
+          This practical system knowledge supports more accurate
+          compartmentation reviews, passive fire inspections,
+          defect reporting and remediation pathways for existing buildings.
+        </p>
+      </div>
+
+      <div className="grid gap-6">
+        <div className="border border-zinc-800 bg-zinc-950 p-8">
+          <h3 className="mb-4 text-2xl font-semibold">
+            AS1530.4 Systems
+          </h3>
+
+<p className="leading-8 text-zinc-400">
+  Understanding of passive fire systems tested to AS1530.4,
+  the primary Australian Standard used to determine the fire
+  resistance of building elements including walls, floors,
+  doors and service penetrations in accordance with NCC
+  compliance requirements.
+</p>
         </div>
-      </section>
 
-      {/* CONTENT */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
-        <div className="space-y-10">
-          <div>
-            <div className="inline-block bg-[#ff6e00]/10 text-[#ff6e00] px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Experience
-            </div>
+        <div className="border border-zinc-800 bg-zinc-950 p-8">
+          <h3 className="mb-4 text-2xl font-semibold">
+            Fire-Rated Construction
+          </h3>
 
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Practical Industry Knowledge
+          <p className="leading-8 text-zinc-400">
+            Understanding of fire-rated wall and floor systems,
+            substrate conditions and compartmentation requirements
+            across commercial buildings.
+          </p>
+        </div>
+
+        <div className="border border-zinc-800 bg-zinc-950 p-8">
+          <h3 className="mb-4 text-2xl font-semibold">
+            Installation Knowledge
+          </h3>
+
+          <p className="leading-8 text-zinc-400">
+            Practical installation background supporting accurate
+            defect identification, reporting and remediation pathways.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* CREDENTIALS */}
+<section className="border-b border-zinc-900 py-24">
+  <div className="mx-auto max-w-7xl px-6">
+    <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+      Credentials & Industry Experience
+    </p>
+
+    <h2 className="text-4xl font-bold md:text-5xl">
+      Passive Fire Compliance & Technical Experience
+    </h2>
+
+    <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-5">
+      <div className="border border-zinc-800 bg-zinc-950 p-8">
+        <h3 className="mb-4 text-2xl font-semibold">
+          ASFP ANZ
+        </h3>
+
+        <p className="leading-8 text-zinc-400">
+          ASFP ANZ Council participation supporting passive fire industry
+          development and compliance systems.
+        </p>
+      </div>
+
+      <div className="border border-zinc-800 bg-zinc-950 p-8">
+        <h3 className="mb-4 text-2xl font-semibold">
+          FPANZ Experience
+        </h3>
+
+        <p className="leading-8 text-zinc-400">
+          Previous FPANZ SIG Chair involvement and passive fire industry
+          technical discussions.
+        </p>
+      </div>
+
+      <div className="border border-zinc-800 bg-zinc-950 p-8">
+        <h3 className="mb-4 text-2xl font-semibold">
+          NZQA Passive Fire
+        </h3>
+
+        <p className="leading-8 text-zinc-400">
+          Level 3 NZQA Passive Fire qualification and involvement
+          in industry review discussions relating to passive fire
+          learning pathways and competency development.
+        </p>
+      </div>
+
+      <div className="border border-zinc-800 bg-zinc-950 p-8">
+        <h3 className="mb-4 text-2xl font-semibold">
+          SBCG
+        </h3>
+
+        <p className="leading-8 text-zinc-400">
+          Southern Building Control Group (SBCG) PS3 Author
+          experience for passive fire compliance documentation.
+        </p>
+      </div>
+
+      <div className="border border-zinc-800 bg-zinc-950 p-8">
+        <h3 className="mb-4 text-2xl font-semibold">
+          Auckland Council
+        </h3>
+
+        <p className="leading-8 text-zinc-400">
+          PS3 Author experience supporting passive fire compliance
+          and technical reporting workflows.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        {/* OVERVIEW */}
+        <section className="border-b border-zinc-900 py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Professional Overview
+            </p>
+
+            <h2 className="text-4xl font-bold md:text-5xl">
+              Technical Compliance & Inspection Systems
             </h2>
 
-            <div className="mt-8 space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="mt-10 space-y-8 text-lg leading-9 text-zinc-400">
               <p>
-                Ben Bakker has extensive experience within the passive fire
-                industry, with a focus on existing building passive fire
-                systems, inspections, compliance reporting and rectification
-                workflows.
+                Benjamin Bakker is involved in passive fire compliance,
+                inspections, reporting systems and digital workflow development
+                across New Zealand and Australia.
               </p>
 
               <p>
-                His work includes commercial passive fire installations,
-                compliance documentation, fire register systems and inspection
-                reporting across a range of existing commercial buildings.
+                His background includes practical installation experience,
+                passive fire defect identification, compartmentation reviews,
+                QA systems, compliance reporting and remediation workflow
+                development for existing commercial buildings and construction
+                projects.
               </p>
 
               <p>
-                This practical experience provides real-world understanding of
-                passive fire defects, system failures and compliance challenges
-                commonly found within existing buildings.
+                Ben focuses heavily on passive fire inspections and pathway-to-
+                compliance reporting for existing buildings, working alongside
+                building managers, consultants, AFSS providers and contractors.
+              </p>
+
+              <p>
+                He is also involved in developing Codexus compliance systems —
+                digital passive fire workflows designed to support inspection
+                records, fire registers, defect tracking and compliance
+                documentation.
               </p>
             </div>
           </div>
+        </section>
 
-          {/* QUALIFICATIONS */}
-          <div className="pt-16">
-            <div className="inline-block bg-[#ff6e00]/10 text-[#ff6e00] px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Qualifications & Industry Involvement
-            </div>
+        {/* CONTACT CTA */}
+        <section className="py-24">
+          <div className="mx-auto max-w-5xl px-6 text-center">
+            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Contact
+            </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                "Managing Director — BAKKER PFI LTD",
-                "Passive Fire Engineering Consultant",
-                "Level 3 Passive Fire Protection Certified",
-                "PS3 Auckland Council Author",
-                "Former FPANZ Passive Fire Special Interest Group Chair",
-                "Current ASFP ANZ Council Member",
-                "Existing Building Passive Fire Specialist",
-                "Developer of Codexus Compliance Systems",
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm"
-                >
-                  <div className="w-4 h-4 rounded-full bg-[#ff6e00] mb-5" />
-
-                  <p className="text-lg font-semibold leading-relaxed">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* INDUSTRY */}
-          <div className="pt-16">
-            <div className="inline-block bg-[#ff6e00]/10 text-[#ff6e00] px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Industry Focus
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Industry Leadership, Compliance Systems & Existing Buildings
+            <h2 className="text-4xl font-bold md:text-5xl">
+              Discuss Passive Fire Compliance
             </h2>
 
-            <div className="mt-8 space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p>
-                Ben has been actively involved in the passive fire industry
-                through technical discussion, industry working groups and
-                association-level participation.
-              </p>
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+              For passive fire inspections, compliance reporting,
+              compartmentation reviews or technical compliance support
+              across Sydney and NSW.
+            </p>
 
-              <p>
-                His experience includes serving as Chair of the FPANZ Passive
-                Fire Special Interest Group and currently serving as a member
-                of the ASFP ANZ Council.
-              </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <a
+                href="mailto:ben@bakkerpfi.com"
+                className="inline-flex border border-orange-500 px-8 py-4 font-semibold text-orange-500 transition hover:bg-orange-500 hover:text-black"
+              >
+                Contact Ben Bakker
+              </a>
 
-              <p>
-                Ben’s focus is on improving passive fire compliance workflows
-                for existing buildings through inspection systems, reporting
-                structures, digital fire registers and lifecycle management.
-              </p>
-
-              <p>
-                This includes the ongoing development of Codexus Compliance
-                Systems, designed to support inspection reporting, passive fire
-                registers and compliance tracking workflows.
-              </p>
-
-              <p>
-                The objective is to provide building owners and facility
-                managers with clear pathways toward passive fire compliance
-                through practical reporting and structured workflow management.
-              </p>
+              <a
+                href="https://www.linkedin.com/in/benjamin1975/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex border border-zinc-700 px-8 py-4 font-semibold text-white transition hover:border-orange-500"
+              >
+                LinkedIn Profile
+              </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       <Footer />
-    </main>
+    </>
   );
 }

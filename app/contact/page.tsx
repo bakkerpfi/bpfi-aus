@@ -1,152 +1,157 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
-
+    <>
       <Navbar />
 
-      {/* HERO */}
-      <section className="border-b border-zinc-900 py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <main className="min-h-screen bg-black text-white">
+        {/* HERO */}
+        <section className="border-b border-zinc-900 py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Contact BAKKER PFI Australia
+            </p>
 
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Contact BAKKER PFI LTD
-          </p>
+            <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
+              Sydney Passive Fire Compliance Support
+            </h1>
 
-          <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-            Christchurch Passive Fire Compliance Support
-          </h1>
-
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
-            Contact Benjamin Bakker for passive fire inspections,
-            compartmentation surveys,
-            BWOF remedial support,
-            fire door assessments and compliance reporting
-            across Christchurch and Canterbury.
-          </p>
-
-        </div>
-      </section>
-
-      {/* CONTACT DETAILS */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6">
-
-          <div className="grid gap-10 lg:grid-cols-2">
-
-            {/* LEFT */}
-            <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-10">
-
-              <p className="text-sm uppercase tracking-[0.3em] text-orange-500">
-                Direct Contact
-              </p>
-
-              <h2 className="mt-6 text-4xl font-bold">
-                Benjamin Bakker
-              </h2>
-
-              <p className="mt-3 text-xl text-orange-500">
-                Managing Director
-              </p>
-
-              <div className="mt-12 space-y-8 text-lg text-zinc-300">
-
-                <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                    Mobile
-                  </p>
-
-                  <a
-                    href="tel:+64226795244"
-                    className="mt-2 block text-2xl font-bold hover:text-orange-500"
-                  >
-                    +64 22 679 5244
-                  </a>
-                </div>
-
-                <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                    Email
-                  </p>
-
-                  <a
-                    href="mailto:ben@bakkerpfi.com"
-                    className="mt-2 block text-2xl font-bold hover:text-orange-500"
-                  >
-                    ben@bakkerpfi.com
-                  </a>
-                </div>
-
-                <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                    LinkedIn
-                  </p>
-
-                  <a
-                    href="https://www.linkedin.com/in/benjamin1975/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 block text-2xl font-bold hover:text-orange-500"
-                  >
-                    linkedin.com/in/benjamin1975
-                  </a>
-                </div>
-
-              </div>
-
-            </div>
-
-            {/* RIGHT */}
-            <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-10">
-
-              <p className="text-sm uppercase tracking-[0.3em] text-orange-500">
-                Christchurch Compliance Support
-              </p>
-
-              <h2 className="mt-6 text-4xl font-bold">
-                Passive Fire Inspection Services
-              </h2>
-
-              <div className="mt-10 space-y-6 text-lg leading-8 text-zinc-400">
-
-                <p>
-                  Passive fire inspections and compartmentation surveys.
-                </p>
-
-                <p>
-                  Existing building compliance reviews and defect identification.
-                </p>
-
-                <p>
-                  BWOF remedial support and passive fire reporting workflows.
-                </p>
-
-                <p>
-                  Fire stopping and penetration compliance assessments.
-                </p>
-
-                <p>
-                  Fire door defect identification and reporting.
-                </p>
-
-                <p>
-                  Codexus digital compliance workflow support.
-                </p>
-
-                <p>
-                  Supported by BAKKER PFI LTD Auckland operations team and real-world installation knowledge.
-                </p>
-
-              </div>
-
-            </div>
-
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+              Contact Benjamin Bakker for passive fire inspections,
+              compartmentation surveys,
+              AFSS support,
+              fire door inspections,
+              compliance reporting and remediation pathway support
+              throughout Sydney and NSW.
+            </p>
           </div>
+        </section>
 
-        </div>
-      </section>
+        {/* CONTACT DETAILS */}
+        <section className="py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="grid gap-10 lg:grid-cols-2">
+              {/* LEFT */}
+              <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-10">
+                <p className="text-sm uppercase tracking-[0.3em] text-orange-500">
+                  Direct Contact
+                </p>
 
-    </main>
+                <h2 className="mt-6 text-4xl font-bold">
+                  Benjamin Bakker
+                </h2>
+
+                <p className="mt-3 text-xl text-orange-500">
+                  Managing Director
+                </p>
+
+                <div className="mt-12 space-y-8 text-lg text-zinc-300">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                      Mobile
+                    </p>
+
+                    <a
+                      href="tel:+61415568983"
+                      className="mt-2 block text-2xl font-bold hover:text-orange-500"
+                    >
+                      +61 415 568 983
+                    </a>
+                  </div>
+
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                      Office
+                    </p>
+
+                    <a
+                      href="tel:+61290679765"
+                      className="mt-2 block text-2xl font-bold hover:text-orange-500"
+                    >
+                      +61 2 9067 9765
+                    </a>
+                  </div>
+
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                      Email
+                    </p>
+
+                    <a
+                      href="mailto:ben@bakkerpfi.com"
+                      className="mt-2 block text-2xl font-bold hover:text-orange-500"
+                    >
+                      ben@bakkerpfi.com
+                    </a>
+                  </div>
+
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                      LinkedIn
+                    </p>
+
+                    <a
+                      href="https://www.linkedin.com/in/benjamin1975/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 block text-2xl font-bold hover:text-orange-500"
+                    >
+                      linkedin.com/in/benjamin1975
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT */}
+              <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-10">
+                <p className="text-sm uppercase tracking-[0.3em] text-orange-500">
+                  Sydney Compliance Support
+                </p>
+
+                <h2 className="mt-6 text-4xl font-bold">
+                  Passive Fire Inspection Services
+                </h2>
+
+                <div className="mt-10 space-y-6 text-lg leading-8 text-zinc-400">
+                  <p>
+                    Passive fire inspections and compartmentation surveys.
+                  </p>
+
+                  <p>
+                    Existing building compliance reviews and defect
+                    identification workflows.
+                  </p>
+
+                  <p>
+                    AFSS support and passive fire compliance reporting.
+                  </p>
+
+                  <p>
+                    Fire stopping and penetration compliance assessments.
+                  </p>
+
+                  <p>
+                    Fire door inspections and defect identification.
+                  </p>
+
+                  <p>
+                    Codexus digital compliance workflow support.
+                  </p>
+
+                  <p>
+                    Supported by real-world passive fire installation
+                    knowledge and technical system understanding.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }

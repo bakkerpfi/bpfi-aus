@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
 
@@ -8,230 +9,220 @@ export default function HomePage() {
 
       <Navbar />
 
-      {/* HERO */}
-      <section className="relative overflow-hidden border-b border-zinc-900">
+{/* HERO */}
+<section className="relative flex min-h-[92vh] items-center overflow-hidden border-b border-zinc-900">
+  {/* BACKGROUND IMAGE */}
+  <div className="absolute inset-0">
+    <img
+      src="/sydney.png"
+      alt="Sydney Skyline"
+      className="h-full w-full object-cover"
+    />
 
-        {/* BACKGROUND IMAGE */}
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-90"
-          style={{
-            backgroundImage:
-              "url('/christchurch.png')",
-          }}
-        />
+    {/* DARK OVERLAY */}
+    <div className="absolute inset-0 bg-black/60" />
 
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-black/20" />
+    {/* GRADIENT */}
+    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+  </div>
 
-        {/* CONTENT */}
-        <div className="relative mx-auto max-w-7xl px-6 py-32 md:py-44">
+  <div className="relative z-10 mx-auto max-w-7xl px-6">
+    <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
+      Sydney Passive Fire Compliance
+    </p>
 
-          <p className="mb-6 text-sm uppercase tracking-[0.4em] text-orange-500">
-            Christchurch Passive Fire Compliance Specialists
-          </p>
+    <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
+      Passive Fire Inspection & Compliance Reporting
+    </h1>
 
-          <h1 className="max-w-6xl text-5xl font-bold leading-tight md:text-7xl">
-            Passive Fire Inspection
-            <br />
-            & Compliance Support
-          </h1>
+    <p className="mt-8 max-w-2xl text-lg text-zinc-300">
+      Supporting building owners, consultants, AFSS providers and contractors
+      across Sydney and NSW with passive fire inspections,
+      compartmentation surveys, compliance reporting
+      and rectification workflow support.
+    </p>
 
-          <p className="mt-10 max-w-3xl text-xl leading-10 text-zinc-300">
-            Supporting building owners,
-            IQPs,
-            facility managers and contractors
-            across Christchurch and Canterbury with passive fire inspections,
-            compartmentation surveys,
-            compliance reporting and BWOF remedial support.
-          </p>
+    <div className="mt-10 flex flex-wrap gap-4">
+      <Link
+        href="/contact"
+        className="bg-orange-500 px-6 py-3 font-semibold text-black transition hover:bg-orange-400"
+      >
+        Request Inspection
+      </Link>
 
-          {/* BUTTONS */}
-          <div className="mt-14 flex flex-wrap gap-6">
+      <Link
+        href="/about-ben-bakker"
+        className="border border-zinc-700 px-6 py-3 font-semibold transition hover:border-orange-500"
+      >
+        About Ben Bakker
+      </Link>
+    </div>
+  </div>
+</section>
 
-            <Link
-              href="/contact"
-              className="rounded-full bg-orange-500 px-8 py-4 text-lg font-semibold text-black transition hover:bg-orange-400"
-            >
-              Contact Us
-            </Link>
+{/* SERVICES */}
+<section className="border-b border-zinc-900 py-24">
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="mb-16">
+      <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+        Services
+      </p>
 
-            <Link
-              href="/learning"
-              className="rounded-full border border-zinc-700 px-8 py-4 text-lg font-semibold transition hover:border-orange-500 hover:text-orange-500"
-            >
-              Passive Fire Learning
-            </Link>
+      <h2 className="text-4xl font-bold md:text-5xl">
+        Sydney Passive Fire Compliance Services
+      </h2>
+    </div>
 
-          </div>
+    <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+      <div className="border border-zinc-800 bg-zinc-950 p-8 transition hover:border-orange-500">
+        <h3 className="mb-4 text-2xl font-semibold">
+          Passive Fire Inspections
+        </h3>
 
-        </div>
+        <p className="leading-7 text-zinc-400">
+          Inspection of passive fire systems, penetrations,
+          fire stopping defects and compartmentation issues
+          throughout existing commercial buildings.
+        </p>
+      </div>
 
-      </section>
+      <div className="border border-zinc-800 bg-zinc-950 p-8 transition hover:border-orange-500">
+        <h3 className="mb-4 text-2xl font-semibold">
+          Compartmentation Surveys
+        </h3>
 
-      {/* SERVICES */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-28">
+        <p className="leading-7 text-zinc-400">
+          Detailed surveys of risers, walls, ceilings,
+          fire separations and service penetrations
+          to identify compliance gaps and defects.
+        </p>
+      </div>
 
-        <div className="mx-auto max-w-7xl px-6">
+      <div className="border border-zinc-800 bg-zinc-950 p-8 transition hover:border-orange-500">
+        <h3 className="mb-4 text-2xl font-semibold">
+          Compliance Reporting
+        </h3>
 
-          <div className="max-w-4xl">
+        <p className="leading-7 text-zinc-400">
+          Professional passive fire reports with defect
+          identification, photos, recommendations and
+          rectification pathway support.
+        </p>
+      </div>
 
-            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Services
-            </p>
+      <div className="border border-zinc-800 bg-zinc-950 p-8 transition hover:border-orange-500">
+        <h3 className="mb-4 text-2xl font-semibold">
+          AFSS Support
+        </h3>
 
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Christchurch Passive Fire Compliance Services
-            </h2>
+        <p className="leading-7 text-zinc-400">
+          Supporting AFSS providers, consultants,
+          building managers and contractors with
+          passive fire compliance documentation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-          </div>
+{/* WHY BPFI */}
+<section className="border-b border-zinc-900 py-24">
+  <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-2">
+    <div>
+      <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+        Why BAKKER PFI Australia
+      </p>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <h2 className="text-4xl font-bold md:text-5xl">
+        Technical Passive Fire Compliance Specialists
+      </h2>
+    </div>
 
-            {[
-              {
-                title: "Passive Fire Inspections",
-                text: "Inspection of passive fire systems and identification of compliance defects within existing buildings.",
-              },
-              {
-                title: "Compartmentation Surveys",
-                text: "Surveying fire separations, risers and service penetrations throughout buildings and tenancy spaces.",
-              },
-              {
-                title: "BWOF Remedial Support",
-                text: "Supporting building owners and IQPs with passive fire defect identification and compliance pathways.",
-              },
-              {
-                title: "Fire Door Assessments",
-                text: "Identification of fire door defects, excessive gaps, missing smoke seals and non-compliant modifications.",
-              },
-              {
-                title: "Compliance Reporting",
-                text: "Structured passive fire reporting including defect registers, photographic documentation and survey records.",
-              },
-              {
-                title: "Codexus Compliance Systems",
-                text: "Digital passive fire compliance workflows powered by real inspection and installation knowledge.",
-              },
-            ].map((service) => (
-              <div
-                key={service.title}
-                className="rounded-3xl border border-zinc-800 bg-black p-8"
-              >
+    <div className="space-y-6 text-lg leading-8 text-zinc-400">
+      <p>
+        BAKKER PFI Australia focuses on passive fire inspections,
+        compartmentation assessments and compliance reporting
+        for existing commercial and residential buildings
+        throughout Sydney and New South Wales.
+      </p>
 
-                <h3 className="text-2xl font-bold">
-                  {service.title}
-                </h3>
+      <p>
+        Our role is to identify passive fire defects,
+        document compliance issues and provide a clear
+        pathway toward rectification and ongoing compliance.
+      </p>
 
-                <p className="mt-6 leading-8 text-zinc-400">
-                  {service.text}
-                </p>
+      <p>
+        We work alongside AFSS providers, consultants,
+        contractors, building managers and strata teams
+        to support practical compliance outcomes.
+      </p>
 
-              </div>
-            ))}
+      <p>
+        Our inspection workflows are supported by Codexus
+        compliance systems, allowing structured reporting,
+        defect tracking and scalable passive fire documentation.
+      </p>
+    </div>
+  </div>
+</section>
 
-          </div>
+{/* CODEXUS */}
+<section className="border-b border-zinc-900 py-24">
+  <div className="mx-auto max-w-7xl px-6">
+    <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+      Codexus
+    </p>
 
-        </div>
+    <h2 className="max-w-4xl text-4xl font-bold md:text-5xl">
+      Digital Passive Fire Compliance Systems
+    </h2>
 
-      </section>
+    <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+      BAKKER PFI is developing digital passive fire
+      compliance workflows powered by Codexus —
+      including inspection records, defect tracking,
+      compliance reporting, digital fire registers
+      and rectification management systems.
+    </p>
 
-      {/* WHY IT MATTERS */}
-      <section className="border-b border-zinc-900 py-28">
+    <div className="mt-14 grid gap-8 md:grid-cols-3">
+      <div className="border border-zinc-800 bg-zinc-950 p-8">
+        <h3 className="mb-4 text-2xl font-semibold">
+          Inspection Reporting
+        </h3>
 
-        <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:grid-cols-2">
+        <p className="leading-7 text-zinc-400">
+          Structured digital passive fire inspection reports
+          with defect tracking and compliance workflows.
+        </p>
+      </div>
 
-          <div>
+      <div className="border border-zinc-800 bg-zinc-950 p-8">
+        <h3 className="mb-4 text-2xl font-semibold">
+          Fire Register Systems
+        </h3>
 
-            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Existing Building Compliance
-            </p>
+        <p className="leading-7 text-zinc-400">
+          Digital fire stopping registers and compartmentation
+          records aligned with building compliance requirements.
+        </p>
+      </div>
 
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Understanding Passive Fire Defects
-            </h2>
+      <div className="border border-zinc-800 bg-zinc-950 p-8">
+        <h3 className="mb-4 text-2xl font-semibold">
+          Compliance Workflow
+        </h3>
 
-          </div>
-
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
-
-            <p>
-              Passive fire systems within existing buildings can become compromised over time due to renovations,
-              tenant fitouts,
-              service upgrades and poor workmanship.
-            </p>
-
-            <p>
-              Defective penetrations,
-              damaged fire separations,
-              missing seals and non-compliant fire doors can compromise compartmentation performance.
-            </p>
-
-            <p>
-              Many passive fire defects remain hidden above ceilings,
-              within risers,
-              service shafts and wall penetrations until inspections are carried out.
-            </p>
-
-            <p>
-              BAKKER PFI LTD provides structured inspection and reporting workflows
-              to help identify,
-              document and manage these compliance issues throughout Christchurch and Canterbury.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* CODEXUS */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-28">
-
-        <div className="mx-auto grid max-w-7xl gap-20 px-6 lg:grid-cols-2">
-
-          <div>
-
-            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Codexus Compliance Systems
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Digital Passive Fire Compliance Workflows
-            </h2>
-
-          </div>
-
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
-
-            <p>
-              Codexus is a digital passive fire compliance platform designed to organise inspections,
-              defect registers,
-              penetration records,
-              compliance workflows and building documentation.
-            </p>
-
-            <p>
-              The platform is powered by real-world inspection,
-              reporting and installation knowledge provided by BAKKER PFI LTD.
-            </p>
-
-            <p>
-              Codexus helps bring passive fire information together into a structured compliance ecosystem supporting BWOF workflows,
-              IQP reporting and ongoing building compliance management.
-            </p>
-
-            <Link
-              href="/codexus"
-              className="inline-block rounded-full border border-orange-500 px-8 py-4 font-semibold text-orange-500 transition hover:bg-orange-500 hover:text-black"
-            >
-              Explore Codexus
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
+        <p className="leading-7 text-zinc-400">
+          Managing identification, reporting,
+          rectification and compliance pathways
+          through connected digital systems.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* BENJAMIN SECTION */}
       <section className="border-b border-zinc-900 py-28">
@@ -406,6 +397,7 @@ export default function HomePage() {
 
       </section>
 
+      <Footer />
     </main>
   );
 }

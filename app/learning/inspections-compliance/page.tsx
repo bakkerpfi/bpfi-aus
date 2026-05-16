@@ -1,325 +1,207 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Passive Fire Inspections Christchurch | BAKKER PFI LTD",
+  title: "Passive Fire Inspections & Compliance Sydney | BAKKER PFI Australia",
   description:
-    "Passive fire inspection and compliance reporting services across Christchurch and Canterbury including fire compartmentation, fire doors and penetration inspections.",
+    "Learn about passive fire inspections, compliance workflows and compartmentation reviews throughout Sydney and NSW.",
 };
 
 export default function InspectionsCompliancePage() {
   return (
-    <main className="min-h-screen bg-black text-white">
-
+    <>
       <Navbar />
 
-      {/* HERO */}
-      <section className="relative overflow-hidden border-b border-zinc-900 py-32">
+      <main className="min-h-screen bg-black text-white">
+        {/* HERO */}
+        <section className="relative overflow-hidden border-b border-zinc-900 py-32">
+          {/* BACKGROUND */}
+          <div className="absolute inset-0">
+            <img
+              src="/learning/fire-stopping-example.png"
+              alt="Passive Fire Inspections Sydney"
+              className="h-full w-full object-cover"
+            />
 
-        {/* BACKGROUND */}
-        <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-black/60" />
 
-          <img
-            src="/christchurch.png"
-            alt="Christchurch Passive Fire Inspections"
-            className="h-full w-full object-cover"
-          />
-
-          <div className="absolute inset-0 bg-black/20" />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
-
-        </div>
-
-        {/* CONTENT */}
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
-
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Christchurch Passive Fire Compliance
-          </p>
-
-          <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-            Passive Fire Inspections
-            <br />
-            & Compliance Reporting
-          </h1>
-
-          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-200">
-            Understanding how passive fire inspections,
-            compartmentation reviews and compliance reporting support building fire safety across Christchurch and Canterbury.
-          </p>
-
-        </div>
-
-      </section>
-
-      {/* INTRO */}
-      <section className="border-b border-zinc-900 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Why Inspections Matter
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Passive Fire Defects Are Often Hidden
-            </h2>
-
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
           </div>
 
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
-
-            <p>
-              Passive fire systems are designed to slow the spread of fire and smoke throughout a building,
-              protecting occupants,
-              escape routes and property.
+          {/* CONTENT */}
+          <div className="relative z-10 mx-auto max-w-7xl px-6">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Sydney Passive Fire Learning
             </p>
 
-            <p>
-              However,
-              many passive fire defects remain hidden above ceilings,
-              within risers,
-              service shafts and concealed wall penetrations until inspections are carried out.
-            </p>
+            <h1 className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
+              Passive Fire Inspections
+              <br />
+              & Compliance
+            </h1>
 
-            <p>
-              Damaged fire doors,
-              missing smoke seals,
-              unsealed penetrations and compromised fire-rated barriers can all affect compartmentation performance.
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-300">
+              Understanding passive fire inspection workflows,
+              compartmentation reviews and compliance reporting
+              throughout Sydney and NSW commercial buildings.
             </p>
-
           </div>
+        </section>
 
-        </div>
+        {/* INTRO */}
+        <section className="border-b border-zinc-900 py-24">
+          <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+            <div>
+              <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+                Passive Fire Inspections
+              </p>
 
-      </section>
-
-      {/* BWOF */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              BWOF & Compliance
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Supporting Building Compliance Workflows
-            </h2>
-
-          </div>
-
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
-
-            <p>
-              Passive fire inspections can support compliance workflows associated with Building Warrants of Fitness (BWOF),
-              IQP inspections and ongoing building maintenance programmes.
-            </p>
-
-            <p>
-              Inspection reports help identify passive fire defects,
-              document building conditions
-              and support remedial planning for fire compartmentation systems.
-            </p>
-
-            <p>
-              These workflows improve visibility of passive fire systems throughout existing buildings
-              and assist building owners and facility managers with understanding compliance risks.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* INSPECTION AREAS */}
-      <section className="border-b border-zinc-900 py-24">
-
-        <div className="mx-auto max-w-7xl px-6">
-
-          <div className="mb-16">
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Inspection Scope
-            </p>
-
-            <h2 className="text-4xl font-bold md:text-6xl">
-              Typical Survey Areas
-            </h2>
-
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-
-            {[
-              "Fire doors",
-              "Service penetrations",
-              "Risers & shafts",
-              "Fire & smoke separations",
-              "Fire-rated walls",
-              "Fire-rated floors",
-              "Ceiling compartmentation",
-              "Plant rooms",
-              "Escape routes",
-              "Compliance schedule systems",
-              "Passive fire barriers",
-              "Existing building defects",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-3xl border border-zinc-800 bg-zinc-950 p-8 transition hover:border-orange-500"
-              >
-
-                <p className="text-xl font-semibold leading-8">
-                  {item}
-                </p>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* PROCESS */}
-      <section className="border-b border-zinc-900 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Inspection Workflow
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Structured Inspection & Reporting
-            </h2>
-
-          </div>
-
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
-
-            <p>
-              BAKKER PFI LTD uses structured inspection workflows designed to improve visibility of passive fire systems throughout buildings.
-            </p>
-
-            <p>
-              Inspection records may include:
-              photographs,
-              penetration records,
-              defect identification,
-              fire door observations,
-              compartmentation reviews and compliance reporting.
-            </p>
-
-            <p>
-              These workflows support BWOF compliance visibility,
-              defect management
-              and passive fire reporting throughout Christchurch and Canterbury.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* CODEXUS */}
-      <section className="border-b border-zinc-900 bg-zinc-950 py-24">
-
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
-
-          <div>
-
-            <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
-              Codexus Compliance Systems
-            </p>
-
-            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Digital Passive Fire Compliance Workflows
-            </h2>
-
-          </div>
-
-          <div className="space-y-8 text-lg leading-8 text-zinc-400">
-
-            <p>
-              Codexus is a digital passive fire compliance platform designed to support inspections,
-              defect registers,
-              penetration records and compliance reporting workflows.
-            </p>
-
-            <p>
-              The platform is powered by real-world passive fire inspection and installation knowledge provided by BAKKER PFI LTD.
-            </p>
-
-            <div className="pt-4">
-
-              <Link
-                href="/codexus"
-                className="inline-flex rounded-full border border-orange-500 px-8 py-4 font-semibold text-orange-500 transition hover:bg-orange-500 hover:text-black"
-              >
-                Explore Codexus
-              </Link>
-
+              <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+                Identifying Building Fire Safety Defects
+              </h2>
             </div>
 
+            <div className="space-y-8 text-lg leading-8 text-zinc-400">
+              <p>
+                Passive fire inspections help identify defects affecting
+                fire compartmentation throughout buildings.
+              </p>
+
+              <p>
+                Inspections commonly identify unsealed penetrations,
+                damaged fire-rated walls,
+                defective fire doors and non-compliant fire stopping systems.
+              </p>
+
+              <p>
+                Existing buildings often contain concealed passive fire
+                defects resulting from historical building modifications
+                and service installations.
+              </p>
+            </div>
           </div>
+        </section>
 
-        </div>
+        {/* WORKFLOW */}
+        <section className="border-b border-zinc-900 bg-zinc-950 py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-16">
+              <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+                Inspection Workflow
+              </p>
 
-      </section>
+              <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+                Typical Compliance Process
+              </h2>
+            </div>
 
-      {/* CTA */}
-      <section className="py-32">
+            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+              {[
+                {
+                  title: "Inspection",
+                  text: "Site inspections identify passive fire defects and compartmentation issues.",
+                },
+                {
+                  title: "Documentation",
+                  text: "Defects are documented with photos, observations and location references.",
+                },
+                {
+                  title: "Reporting",
+                  text: "Compliance reports outline identified issues and remediation recommendations.",
+                },
+                {
+                  title: "Rectification",
+                  text: "Passive fire remediation works are completed using tested systems.",
+                },
+              ].map((step) => (
+                <div
+                  key={step.title}
+                  className="rounded-3xl border border-zinc-800 bg-black p-8"
+                >
+                  <h3 className="text-2xl font-bold">
+                    {step.title}
+                  </h3>
 
-        <div className="mx-auto max-w-5xl px-6 text-center">
-
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
-            Christchurch & Canterbury
-          </p>
-
-          <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-            Passive Fire Inspection Support
-          </h2>
-
-          <p className="mx-auto mt-10 max-w-3xl text-xl leading-10 text-zinc-400">
-            Contact Benjamin Bakker to discuss passive fire inspections,
-            compartmentation surveys,
-            defect reporting and compliance workflows throughout Christchurch and Canterbury.
-          </p>
-
-          <div className="mt-14 flex flex-wrap justify-center gap-4">
-
-            <Link
-              href="/contact"
-              className="rounded-full bg-orange-500 px-10 py-5 text-lg font-semibold text-black transition hover:bg-orange-400"
-            >
-              Contact BAKKER PFI LTD
-            </Link>
-
-            <Link
-              href="/learning"
-              className="rounded-full border border-zinc-700 px-10 py-5 text-lg font-semibold transition hover:border-orange-500 hover:text-orange-500"
-            >
-              Back To Learning Centre
-            </Link>
-
+                  <p className="mt-6 leading-8 text-zinc-400">
+                    {step.text}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
 
-        </div>
+        {/* WHY IT MATTERS */}
+        <section className="border-b border-zinc-900 py-24">
+          <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+            <div>
+              <p className="mb-3 text-sm uppercase tracking-[0.3em] text-orange-500">
+                Existing Buildings
+              </p>
 
-      </section>
+              <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+                Maintaining Passive Fire Systems
+              </h2>
+            </div>
 
-    </main>
+            <div className="space-y-8 text-lg leading-8 text-zinc-400">
+              <p>
+                Passive fire systems require ongoing maintenance and review
+                throughout the life of a building.
+              </p>
+
+              <p>
+                Building modifications,
+                new services and historical alterations can affect
+                compartmentation performance over time.
+              </p>
+
+              <p>
+                Regular inspection workflows assist with identifying
+                remediation requirements and maintaining building compliance.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-32">
+          <div className="mx-auto max-w-5xl px-6 text-center">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-orange-500">
+              Continue Learning
+            </p>
+
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
+              Explore More Passive Fire Topics
+            </h2>
+
+            <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
+              Continue learning about fire compartmentation,
+              fire doors,
+              service penetrations and passive fire compliance workflows.
+            </p>
+
+            <div className="mt-12 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/learning"
+                className="rounded-full bg-orange-500 px-8 py-4 font-semibold text-black transition hover:bg-orange-400"
+              >
+                Back To Learning Centre
+              </Link>
+
+              <Link
+                href="/learning/common-defects"
+                className="rounded-full border border-zinc-700 px-8 py-4 font-semibold transition hover:border-orange-500 hover:text-orange-500"
+              >
+                Common Passive Fire Defects
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }

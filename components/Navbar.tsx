@@ -39,8 +39,19 @@ export default function Navbar() {
             About
           </Link>
 
+          <Link
+  href="/about-ben-bakker"
+  className="transition hover:text-orange-500"
+>
+  Ben Bakker
+</Link>
+
           <Link href="/services" className="transition hover:text-orange-500">
             Services
+          </Link>
+
+          <Link href="/projects" className="transition hover:text-orange-500">
+            Projects
           </Link>
 
           <Link href="/locations" className="transition hover:text-orange-500">
@@ -93,11 +104,27 @@ export default function Navbar() {
             </Link>
 
             <Link
+  href="/about-ben-bakker"
+  className="border-b border-zinc-800 py-4"
+  onClick={() => setOpen(false)}
+>
+  Ben Bakker
+</Link>
+
+            <Link
               href="/services"
               className="border-b border-zinc-800 py-4"
               onClick={() => setOpen(false)}
             >
               Services
+            </Link>
+
+            <Link
+              href="/projects"
+              className="border-b border-zinc-800 py-4"
+              onClick={() => setOpen(false)}
+            >
+              Projects
             </Link>
 
             <Link

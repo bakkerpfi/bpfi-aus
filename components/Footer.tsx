@@ -6,7 +6,7 @@ export default function Footer() {
           {/* LEFT */}
           <div>
             <p className="text-lg font-bold">
-              BAKKER PFI LTD
+              BAKKER PFI Australia
             </p>
 
             <p className="mt-2 text-gray-400">
@@ -76,10 +76,10 @@ export default function Footer() {
             </p>
 
             <p className="text-sm leading-relaxed text-gray-400">
-              Passive fire inspections, compartmentation surveys, fire door
-              inspections, penetration reviews, AFSS reporting and compliance
-              support throughout Sydney and New South Wales commercial &
-              residential buildings.
+              Passive fire inspections, compartmentation surveys,
+              fire door inspections, penetration reviews,
+              AFSS reporting and compliance support throughout
+              Sydney and New South Wales commercial and residential buildings.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Footer() {
         <div className="mt-10 border-t border-white/10 pt-6 text-sm text-gray-500">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p>
-              © 2026 BAKKER PFI LTD. All rights reserved.
+              © 2026 BAKKER PFI Australia. All rights reserved.
             </p>
 
             <p>
