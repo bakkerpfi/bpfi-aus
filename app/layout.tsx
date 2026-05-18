@@ -4,6 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://bakkerpfi.co.nz"),
 
+  icons: {
+  icon: "/favicon.ico",
+},
+
   title: {
     default: "Passive Fire Inspection Christchurch | BAKKER PFI LTD",
     template: "%s | BAKKER PFI LTD",
