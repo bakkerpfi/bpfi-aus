@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-800 bg-black/90 backdrop-blur">
+    <header className="sticky top-0 z-[9999] border-b border-zinc-800 bg-black/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-4">
@@ -35,16 +36,37 @@ export default function Navbar() {
             Home
           </Link>
 
-          <Link href="/about" className="transition hover:text-orange-500">
-            About
-          </Link>
+          {/* ABOUT DROPDOWN */}
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setAboutOpen(!aboutOpen)}
+              className="flex items-center gap-1 uppercase tracking-wide transition hover:text-orange-500"
+            >
+              About
+              <ChevronDown size={16} />
+            </button>
 
-          <Link
-  href="/about-ben-bakker"
-  className="transition hover:text-orange-500"
->
-  Ben Bakker
-</Link>
+            {aboutOpen && (
+              <div className="absolute left-0 top-full z-[9999] mt-4 min-w-[240px] rounded-2xl border border-zinc-800 bg-black p-2 shadow-2xl">
+                <Link
+                  href="/about"
+                  className="block rounded-xl px-4 py-3 text-sm transition hover:bg-zinc-900 hover:text-orange-500"
+                  onClick={() => setAboutOpen(false)}
+                >
+                  About BAKKER PFI
+                </Link>
+
+                <Link
+                  href="/about-ben-bakker"
+                  className="block rounded-xl px-4 py-3 text-sm transition hover:bg-zinc-900 hover:text-orange-500"
+                  onClick={() => setAboutOpen(false)}
+                >
+                  About Ben Bakker
+                </Link>
+              </div>
+            )}
+          </div>
 
           <Link href="/services" className="transition hover:text-orange-500">
             Services
@@ -76,6 +98,7 @@ export default function Navbar() {
 
         {/* MOBILE BUTTON */}
         <button
+          type="button"
           onClick={() => setOpen(!open)}
           className="text-white md:hidden"
         >
@@ -95,21 +118,30 @@ export default function Navbar() {
               Home
             </Link>
 
-            <Link
-              href="/about"
-              className="border-b border-zinc-800 py-4"
-              onClick={() => setOpen(false)}
-            >
-              About
-            </Link>
+            {/* ABOUT SECTION */}
+            <div className="border-b border-zinc-800 py-4">
+              <p className="mb-3 text-xs uppercase tracking-[0.25em] text-zinc-500">
+                About
+              </p>
 
-            <Link
-  href="/about-ben-bakker"
-  className="border-b border-zinc-800 py-4"
-  onClick={() => setOpen(false)}
->
-  Ben Bakker
-</Link>
+              <div className="flex flex-col gap-3">
+                <Link
+                  href="/about"
+                  className="transition hover:text-orange-500"
+                  onClick={() => setOpen(false)}
+                >
+                  About BAKKER PFI
+                </Link>
+
+                <Link
+                  href="/about-ben-bakker"
+                  className="transition hover:text-orange-500"
+                  onClick={() => setOpen(false)}
+                >
+                  About Ben Bakker
+                </Link>
+              </div>
+            </div>
 
             <Link
               href="/services"
