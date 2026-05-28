@@ -54,10 +54,10 @@ export default function ContactPage() {
                     </p>
 
                     <a
-                      href="tel:+61415568983"
+                      href="tel:+61415586983"
                       className="mt-2 block text-2xl font-bold hover:text-orange-500"
                     >
-                      +61 415 568 983
+                      +61 415 586 983
                     </a>
                   </div>
 

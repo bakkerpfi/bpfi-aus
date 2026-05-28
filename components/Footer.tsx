@@ -28,10 +28,10 @@ export default function Footer() {
               <p>
                 Mobile:{" "}
                 <a
-                  href="tel:+61415568983"
+                  href="tel:+61415586983"
                   className="transition-colors hover:text-white"
                 >
-                  +61 415 568 983
+                  +61 415 586 983
                 </a>
               </p>
 
